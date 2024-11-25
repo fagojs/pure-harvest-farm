@@ -1,11 +1,19 @@
-
+html, body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', Helvetica, sans-serif;
+}
 .navbar{
+    height: 50px;
+    padding: 0 5px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    box-shadow: 0 4px 4px#f5f4f4;
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.25);
+}
+.logo{
 }
 /*ham-menu on right side while toggled*/
 .side-nav{
@@ -18,6 +26,7 @@
     right: -300px;
     font-size: 1rem;
     transition: .3s ease;
+    z-index: 9;
 }
 .side-nav.active{
     right: 0;
@@ -27,7 +36,6 @@
 .ham-menu{
     height: 40px;
     width:40px;
-    margin-left: auto;
     position: relative;
 }
 .ham-bar{
@@ -40,6 +48,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     transition: .3s ease;
+    z-index: 9;
 }
 .ham-bar:nth-child(1){
     top: 25%;
@@ -73,3 +82,45 @@
     color: #010101;
     font-weight: 600;
 }
+
+/*banner*/
+.banner {
+    height: 250px;
+    background-image: url("../images/farm_home.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.25);
+    margin: 5px ;
+}
+
+.inner-banner{
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.inner-banner p{
+    color: #fff;
+}
+.inner-banner button {
+    width: 200px;
+    height: 50px;
+    background-color: #087933;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    border: none;
+  }
+ .inner-banner button:hover {
+    background-color: #fff;
+    color: #087933;
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.25);
+  }
