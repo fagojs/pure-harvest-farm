@@ -11,9 +11,8 @@ html, body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.25);
-}
-.logo{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.25); */
 }
 /*ham-menu on right side while toggled*/
 .side-nav{
@@ -91,8 +90,8 @@ html, body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.25);
-    margin: 5px ;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
 }
 
 .inner-banner{
@@ -127,7 +126,7 @@ html, body{
 
 
 /*gallery styling*/
-
+/*gallery section*/
 .gallery-aroundfarms{
     margin: 20px 10px 20px 10px;
 }
@@ -139,16 +138,42 @@ html, body{
     margin-top: 10px;
     margin-bottom: 0;
 }
+/*gallery container*/
 .gallery-container{
     width: 100%;
     margin: 0 auto;
 }
+/*Top Section*/
 .top-section{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
+/*Video section*/
+.gallery-container .video-section{
+    height: 200px;
+    width: 100%;
+}
+.video-section video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /*fill container*/
+}
+.gallery-container .top-section-aside{
+    display: flex;
+    justify-content: space-between;
+}
+/*Bottom section*/
+.gallery-container .bottom-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+/*figure/img styling*/
 .gallery-container figure{
     width: 160px;
     height: 160px;
@@ -159,24 +184,110 @@ html, body{
     height: 100%;
     box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.25);
 }
-.gallery-container .top-section-aside{
-    display: flex;
-    justify-content: space-between;
+
+/*fototer section*/
+/* General Footer Styling */
+footer {
+    background-color: #ede9de;
+    color: #010101; /* Dark text for readability */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
-.gallery-container .bottom-section{
+
+/* Footer container layout */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Opening Hours Section */
+.openinghours h2 {
+    color: #1d355b; 
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.openinghours .hours p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Newsletter Subscription Section */
+.subscribe-newsletter h2 {
+    color: #087933; 
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.subscribe-newsletter p {
+    color: #087933;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-form input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+.footer-form span {
+    font-size: 12px;
+}
+
+.footer-form button {
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #087933;; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-form button:hover {
+    background-color: #055825; 
+}
+
+/* Map and Address Section */
+.map-location .map-direction iframe {
+    border: 1px solid #777;
+    border-radius: 10px;
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-bottom: 10px;
-}
-.gallery-container .video-section{
     height: 200px;
-    width: 100%;
 }
-.video-section video{
-    height: 100%;
-    width: 100%;
-    object-fit: cover; /*fill container*/
+
+.map-location .location-address .address {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Privacy Policy */
+.privacy-policy p {
+    font-size: 12px;
+    color: #777;
+    margin-top: 20px;
+}
+
+.privacy-policy a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.privacy-policy a:hover {
+    text-decoration: underline;
 }
