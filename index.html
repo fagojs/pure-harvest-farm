@@ -48,13 +48,13 @@
             </div>
         </section>
         <section class="gallery-aroundfarms">
-            <hr>
             <h2>Around The Farm</h2>
+            <!-- Structure for Normal View -->
             <div class="gallery-container">
                 <section class="top-section">
                     <section class="top-section-first">
                         <div class="video-section">
-                            <video autoplay muted loop playsinline>  <!--playsinline for mobile-->>
+                            <video onclick="openView('./assets/videos/farm_video.mp4', 'video')" autoplay muted loop playsinline>  <!--playsinline for mobile-->>
                                 <source src="./assets/videos/farm_video.mp4" type="video/mp4">
                               Your browser does not support the video tag.
                             </video>
@@ -62,29 +62,38 @@
                     </section>
                     <section class="top-section-aside">
                         <figure class="image-section">
-                            <img src="./assets/images/farm_1.jpg" alt="around the farm">
+                            <img src="./assets/images/farm_1.jpg" alt="around the farm" onclick="openView('./assets/images/farm_1.jpg', 'image')">
                         </figure>
                         <figure class="image-section">
-                            <img src="./assets/images/farm_2.jpg" alt="around the farm">
+                            <img src="./assets/images/farm_2.jpg" alt="around the farm" onclick="openView('./assets/images/farm_2.jpg', 'image')">
                         </figure>
                     </section>
                 </section>
                 <section class="bottom-section">
                     <figure class="image-section">
-                        <img src="./assets/images/farm_3.jpg" alt="around the farm">
+                        <img src="./assets/images/farm_3.jpg" alt="around the farm" onclick="openView('./assets/images/farm_3.jpg', 'image')">
                     </figure>
                     <figure class="image-section">
-                        <img src="./assets/images/farm_4.jpg" alt="around the farm">
+                        <img src="./assets/images/farm_4.jpg" alt="around the farm" onclick="openView('./assets/images/farm_4.jpg', 'image')">
                     </figure>
                     <figure class="image-section">
-                        <img src="./assets/images/farm_5.jpg" alt="around the farm">
+                        <img src="./assets/images/farm_5.jpg" alt="around the farm" onclick="openView('./assets/images/farm_5.jpg', 'image')">
                     </figure>
                     <figure class="image-section">
-                        <img src="./assets/images/farm_6.jpg" alt="around the farm">
+                        <img src="./assets/images/farm_6.jpg" alt="around the farm" onclick="openView('./assets/images/farm_6.jpg', 'image')">
                     </figure>
                 </section>
             </div>
-            <hr>
+            <!-- Structure for Full View -->
+            <div id="fullview" class="fullview">
+                <span class="closeview" onclick="closeView()">&times;</span>
+                <div class="fullview-content">
+                    <img id="fullimage" src="" alt="Full view" download>
+                    <video id="fullvideo" controls></video>
+                    <!-- download option -->
+                    <a id="downloadlink" href="#" download class="download-btn">Download</a>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
