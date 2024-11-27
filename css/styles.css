@@ -7,7 +7,7 @@ html, body{
 }
 .navbar{
     height: 50px;
-    padding: 0 5px;
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,8 +18,6 @@ html, body{
 .side-nav{
     background-color: #ede9de;
     height: 100vh;
-    width: 70%;
-    max-width: 300px;
     position: fixed;
     top: 0;
     right: -300px;
@@ -90,7 +88,7 @@ html, body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
 }
 
@@ -102,7 +100,7 @@ html, body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: #fff;
 }
 
 .inner-banner p{
@@ -126,11 +124,12 @@ html, body{
 
 /*gallery styling*/
 /*gallery section*/
-.gallery-aroundfarms{
-    margin: 20px 10px 20px 10px;
+main .gallery-aroundfarms{
+    margin: 50px 10px 20px 10px;
 }
 .gallery-aroundfarms h2{
     margin: 10px;
+    text-align: center;
 }
 .gallery-aroundfarms hr{
     border: 1px solid black;
@@ -261,6 +260,11 @@ footer {
     flex-direction: column;
     gap: 20px;
 }
+footer .footer-topsection{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 /* Opening Hours Section */
 .openinghours h2 {
@@ -322,10 +326,10 @@ footer {
 }
 
 /* Map and Address Section */
-.map-location .map-direction iframe {
+footer .map-location .map-direction iframe {
     border: 1px solid #777;
     border-radius: 10px;
-    width: 100%;
+    width: 80%;
     height: 200px;
 }
 
@@ -351,3 +355,140 @@ footer {
 .privacy-policy a:hover {
     text-decoration: underline;
 }
+
+/*for small tablets screen size*/
+@media only screen and (min-width: 610px) {
+    /*gallery responsiveness*/
+    .gallery-container .top-section{
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 5px;
+    }
+    .top-section-aside{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .gallery-container figure{
+        height: 140px;
+        width: 140px;
+        margin-top: 0;
+    }
+    .gallery-container .video-section{
+        height: 100%;
+    }
+    .gallery-container .bottom-section{
+        flex-wrap: nowrap;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+   
+    .gallery-container img{
+        width: 100%;
+        height: 100%;
+        box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.25);
+    } 
+    footer .footer-container{
+        gap: 20px;
+    }
+    footer .footer-topsection{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .openinghours, .subscribe-newsletter, .map-location .map-direction iframe{
+        width: 50%;
+    }
+  }
+
+  /*medium devices*/
+  @media only screen and (min-width: 772px) {
+    .gallery-aroundfarms{
+        margin: 15px;
+    }
+    .gallery-container figure{
+        height: 178px;
+        width: 178px;
+    }
+    /*show navigation links on the navbar and hide ham-menu*/
+    nav .side-nav {
+        position: static;
+        width: 60%;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+        transition: none;
+    }
+    nav .side-nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav .side-nav li {
+        margin: 0;
+    }
+    nav .side-nav a {
+        text-decoration: none;
+        color: #010101;
+        font-weight: 600;
+        transition: color 0.3s ease;
+        font-size: 0.8rem;
+    }
+    nav .side-nav a:hover {
+        color: #777;
+    }
+    nav .ham-menu {
+        display: none;
+    }
+
+  }
+
+  /*laptops*/
+  @media only screen and (min-width: 992px) {
+    .banner{
+        height: 300px;
+    }
+    .inner-banner{
+        width: 50%;
+    }
+    .gallery-aroundfarms{
+        margin: 20px;
+    }
+    .gallery-container .top-section{
+        margin-bottom: 10px;
+    }
+    .gallery-container figure{
+        height: 233px;
+        width: 233px;
+    }
+    .footer-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .map-location .map-direction iframe{
+        width: 100%;
+    }
+  }
+  /*desktops*/
+  @media only screen and (min-width: 1198px) {
+    .gallery-aroundfarms{
+        margin: 20px;
+    }
+    .gallery-container figure{
+        height: 282px;
+        width: 282px;
+    }
+    footer .footer-topsection{
+        flex-direction: column;
+        width: 40%;
+        gap: 20px;
+        align-items: center;
+    }
+    footer .map-location{
+        width: 50%;
+    }
+    footer .map-location .map-direction iframe{
+        width: 100%;
+        height: 250px;
+    }
+  }
