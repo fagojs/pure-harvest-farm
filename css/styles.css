@@ -328,7 +328,12 @@ footer .footer-topsection{
 .footer-form button:hover {
     background-color: #055825; 
 }
-
+#success-message, #failed-message{
+    display: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px;
+}
 /* Map and Address Section */
 footer .map-location .map-direction iframe {
     border: 1px solid #777;
