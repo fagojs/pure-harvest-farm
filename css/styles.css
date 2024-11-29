@@ -100,6 +100,8 @@ html, body{
     color: #fff;
     text-align: center;
 }
+
+/*HOME BANNER*/
 #home-banner{
     height: 250px;
     background-image: url("../assets/images/farm_home.jpg");
@@ -126,12 +128,14 @@ html, body{
     color: #087933;
     box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.25);
 }
+
+/*ABOUT US BANNER*/
 #about-banner{
     /* background-image: linear-gradient(-90deg, #ede9de 0%, #b18e5a 100%); */
     background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
     height: 200px;
 }
-
+/*HOME CONTENT*/
 /*gallery styling*/
 /*gallery section*/
 main .gallery-aroundfarms{
@@ -256,7 +260,41 @@ main .gallery-aroundfarms{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/*ABOUT US CONTENT*/
+.whoweare{
+    margin: 50px 10px 20px 10px;
+}
+.whatwedo{
+    margin: 0 10px 20px 10px;
+}
+.whoweare .whoweare-container, 
+.whatwedo .whatwedo-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 
+.whoweare-container .whoweare-description, 
+.whatwedo-container .whatwedo-description{
+    padding: 5px;
+    background-color: #ede9de;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.whoweare-container .whoweare-image, 
+.whatwedo-container .whatwedo-image{
+    width: 100%;
+    height: auto;
+}
+.whoweare-container .whoweare-image img, 
+.whatwedo-container .whatwedo-image img{
+    width: 100%;
+    height: 100%;
+}
 /*fototer section*/
 /* General Footer Styling */
 footer {
@@ -429,6 +467,20 @@ footer .map-location .map-direction iframe {
         max-width: 55%;
         max-height: 55%;
     }
+    .whoweare .whoweare-container, .whatwedo .whatwedo-container{
+        flex-direction: row;
+    }
+    .whoweare-container .whoweare-description, .whatwedo-container .whatwedo-description,
+    .whoweare-container .whoweare-image, .whatwedo-container .whatwedo-image{
+        flex: 1;
+    }
+    .whatwedo-container .whatwedo-image {
+        order: -1; 
+    }
+    .whoweare-container .whoweare-image, 
+    .whatwedo-container .whatwedo-image{
+        height: 250px;
+    }
     footer .footer-container{
         gap: 20px;
     }
@@ -509,6 +561,27 @@ footer .map-location .map-direction iframe {
     }
     footer .map-location .map-direction iframe{
         width: 100%;
+    }
+    .whoweare{
+        margin: 50px 20px 20px 20px;
+    }
+    .whatwedo{
+        margin: 0 20px 20px 20px;
+    }
+    .whoweare-container .whoweare-description p, 
+    .whatwedo-container .whatwedo-description p{
+        width: 70%;
+        font-size: 1.5rem;
+    }
+    .whoweare-container .whoweare-description h3, 
+    .whatwedo-container .whatwedo-description h3{
+        font-size: 2rem;
+    }
+    .whoweare-container .whoweare-description, 
+    .whatwedo-container .whatwedo-description,
+    .whoweare-container .whoweare-image, 
+    .whatwedo-container .whatwedo-image{
+        height: auto;
     }
   }
   /*desktops*/
