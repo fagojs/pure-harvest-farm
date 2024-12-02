@@ -593,6 +593,12 @@ footer .map-location .map-direction iframe {
         width: auto;
     }
 
+    /*CONTACT PAGE*/
+    .contact-container form .form-part{
+        flex-direction: column;
+        width: 92%;
+    }
+
     /*FOOTER CONTENT*/
     .footer-form input[type="email"], .inner-banner button {
         width: 90%;
@@ -654,6 +660,11 @@ footer .map-location .map-direction iframe {
     }
     .whatwedo-container .whatwedo-image {
         order: -1; 
+    }
+
+    /*CONTACT PAGE*/
+    .social-links .svg-container{
+        gap: 20px;
     }
 
     /*SUSTAINABILITY PAGE*/
@@ -721,6 +732,20 @@ footer .map-location .map-direction iframe {
         display: none;
     }
 
+    /*CONTACT PAGE*/
+    .contact-container{
+        margin: 50px 60px;
+    }
+    .info-social-container{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .info-social-container .description,
+    .info-social-container .social-links{
+        flex: 1;
+    }
+
     /*SUSTAINABILITY PAGE*/
     .commitment .commitment-container, 
     .practices .practices-container{
@@ -776,6 +801,26 @@ footer .map-location .map-direction iframe {
       .whoweare-container .whoweare-description{
           width: 30%;
       }
+
+     /*CONTACT PAGE*/
+    .contact-container{
+        display: flex;
+        gap: 30px;
+        margin: 50px;
+    }
+    .info-social-container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .info-social-container  h3{
+        margin-top: 0;
+    }
+    .contact-container .form-section{
+        width: 60%;
+    }
+    .contact-container .info-social{
+        width: 40%;
+    }
 
     /*FOOTER CONTENT*/
     .footer-container {
