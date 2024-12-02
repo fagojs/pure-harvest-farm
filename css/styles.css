@@ -135,6 +135,20 @@ html, body{
     background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
     height: 200px;
 }
+/*SUSTAINABILITY BANNER*/
+#sustain-banner{
+    height: 250px;
+    width: 100%;
+    background-image: url("../assets/images/sustain_banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#sustain-banner h2{
+    margin: 0;
+}
+
+
 /*HOME CONTENT*/
 /*gallery styling*/
 /*gallery section*/
@@ -294,6 +308,96 @@ main .gallery-aroundfarms{
     box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.25);
 }
 
+/*SUSTAINABILITY STYLING*/
+.commitment{
+    margin: 50px 50px 50px 0;
+}
+.practices{
+    margin: 0 0 50px 50px;
+}
+.commitment .commitment-container, 
+.practices .practices-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} 
+.commitment-container .commitment-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+.commitment-container .commitment-image img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.25);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.practices-container .practices-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px; 
+}
+.practices-container .practices-image img{
+    width: 100%;
+    height: 100%;
+    box-shadow: -4px 4px 4px 0px rgba(0,0,0,0.25);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.partners-container ul{
+    padding-left: 0;
+}
+.practices-container li{
+    list-style-type: square;
+    margin-bottom: 10px;
+}
+.commitment-container .commitment-description p, 
+.practices-container .practices-description ul{
+    margin-top: 0;
+}
+.commitment-container .commitment-description h3, 
+.practices-container .practices-description h3{
+    color: #087933;
+}
+.commitment-container .commitment-image, 
+.practices-container .practices-image{
+    width: 100%;
+    height: auto;
+}
+.supporting-partners{
+    height: auto;
+    margin: 0 20px 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.supporting-partners h3{
+    margin: 5px;
+    text-align: center;
+}
+.supporting-partners .partners-container{
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.partners-container figure{
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+}
+.partners-container figure img{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
 /*FOOTER SECTION*/
 /* General Footer Styling */
 footer {
@@ -423,6 +527,12 @@ footer .map-location .map-direction iframe {
         margin-top: 10px;
     }
 
+    /*SUSTAINABILITY PAGE*/
+    .partners-container figure{
+        height: auto;
+        width: auto;
+    }
+
     /*FOOTER CONTENT*/
     .footer-form input[type="email"], .inner-banner button {
         width: 90%;
@@ -486,6 +596,14 @@ footer .map-location .map-direction iframe {
         order: -1; 
     }
 
+    /*SUSTAINABILITY PAGE*/
+    .commitment-container .commitment-description{
+        padding-left: 50px;
+    }
+    .practices-container .practices-description{
+        padding-right: 50px;
+    }
+
     /*FOOTER CONTENT*/
     footer .footer-container{
         gap: 20px;
@@ -541,6 +659,27 @@ footer .map-location .map-direction iframe {
     }
     nav .ham-menu {
         display: none;
+    }
+
+    /*SUSTAINABILITY PAGE*/
+    .commitment .commitment-container, 
+    .practices .practices-container{
+        flex-direction: row;
+    }
+    .commitment-container .commitment-description{
+        width: 50%;
+        padding-right: 20px;
+    }
+    .practices-container .practices-description{
+        width: 50%;
+        padding-left: 20px;
+    }
+    .commitment-container .commitment-image, 
+    .practices-container .practices-image{
+        width: 60%;
+    }
+    .commitment-container .commitment-image{
+         order: -1;
     }
 
   }
