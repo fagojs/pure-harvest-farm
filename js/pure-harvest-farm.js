@@ -88,21 +88,33 @@ document.getElementById("send-message").addEventListener("click",function(){
     })
     // array of id's from form fields
     const formInputFields = ['firstname', 'lastname', 'email', 'contactnumber', 'messagesubject', 'messagebody'];
+
+    //email and contactnumber regex
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const contactPattern = /^[0-9]{10}$/;
+
     formInputFields.forEach(inputField =>{
         const field = document.getElementById(inputField);
         const errorField = document.getElementById(`${inputField}-error`);
+        
 
         //if empty fields display message
         if (!field.value.trim()) {
             errorField.textContent = `${field.placeholder} is required!`;
             errorField.style.display = "block";
             isValid = false;
-        }else {
-            errorField.style.display = "none"; 
+        }else if(inputField === "email" && !emailPattern.test(field.value)){ //check email with regex
+            errorField.textContent = "Please provide correct email format!";
+            errorField.style.display = "block";
+            isValid = false;
+        }else if(inputField === "contactnumber" && !contactPattern.test(field.value)){ //check contactnumber with regex
+            errorField.textContent = "Contact number must be 10 digits!";
+            errorField.style.display = "block";
+            isValid = false;
         }
     });
 
-    //if field are not empty
+    //if fields are not empty and are in correct format 
     const successMessage = document.getElementById("successful");
     if(isValid){
         successMessage.style.display = "block";
