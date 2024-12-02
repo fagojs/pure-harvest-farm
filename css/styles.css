@@ -347,11 +347,12 @@ main .gallery-aroundfarms{
     min-height: 80px;
 }
 .contact-container form .error {
+    display: none;
     color: #e23718;
     font-size: 14px;
     margin-top: 5px;
 }
-.contact-container form .success-message {
+.contact-container form .success {
     display: none;
     text-align: center;
     color: #087933;
@@ -663,9 +664,7 @@ footer .map-location .map-direction iframe {
     }
 
     /*CONTACT PAGE*/
-    .social-links .svg-container{
-        gap: 20px;
-    }
+    
 
     /*SUSTAINABILITY PAGE*/
     .commitment-container .commitment-description{
