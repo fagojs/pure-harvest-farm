@@ -338,6 +338,11 @@ main .gallery-aroundfarms{
     border: none;
     border-radius: 5px;
 }
+.contact-container .button button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.25);
+}
 .contact-container form input:focus::placeholder,
 .contact-container form textarea:focus::placeholder {
     opacity: 0.5;
@@ -367,6 +372,10 @@ main .gallery-aroundfarms{
 .social-links .svg-container img{
     height: 48px;
     width: 48px;
+} 
+.social-links .svg-container img:hover{
+    cursor: pointer;
+    opacity: 0.8;
 } 
 
 /*SUSTAINABILITY STYLING*/
