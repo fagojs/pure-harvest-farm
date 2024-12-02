@@ -41,27 +41,36 @@
     <main>
            <div class="contact-container">
                 <section class="form-section">
-                    <form action="#" class="contact-form">
+                    <form class="contact-form" id = "contact-form">
                         <div class="form-part">
                             <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
                             <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
                         </div>
-                        <section class="form-part">
+                        <!-- error-container -->
+                        <p class ="error" id = "firstname-error"></p>
+                        <p class ="error" id = "lastname-error"></p>
+                        <div class="form-part">
                             <input type="email" name="email" id="email" placeholder="Email" required>
                             <input type="tel" name="contactnumber" id="contactnumber" placeholder="Contact Number" required>
-                        </section>
-                        <section class="form-part">
+                        </div>
+                        <!-- error-container -->
+                        <p class ="error" id = "email-error"></p>
+                        <p class ="error" id = "contactnumber-error"></p>
+                        <div class="form-part">
                             <input type="text" name="messagesubject" id="messagesubject" placeholder="Message Subject" required>
-                        </section>
-                        <section class="form-part">
+                        </div>
+                        <!-- error-container -->
+                        <p class ="error" id = "messagesubject-error"></p>
+                        <div class="form-part">
                             <textarea name="messagebody" id="messagebody" placeholder="Message Body" required></textarea>
-                        </section>
-                        <section class="button">
-                            <button type="button" id="sendMessage">Send Message</button>
-                        </section>
-                        <section class="success-message" id="successMessage">
-                            <p>Your message has been sent successfully!</p>
-                        </section>
+                        </div>
+                        <!-- error-container -->
+                        <p class ="error" id = "messagebody-error"></p>
+                        <div class="button">
+                            <button type="button" id="send-message">Send Message</button>
+                        </div>
+                        <!-- success-container -->
+                        <p class="success" id="successful">Your Message is sent successfully!</p>
                     </form>
                 </section>
                 <section class="info-social">
