@@ -308,6 +308,66 @@ main .gallery-aroundfarms{
     box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.25);
 }
 
+/*CONTACT PAGE*/
+/*FORM SECTION*/
+.contact-container{
+    margin: 50px 30px;
+}
+.contact-container .form-section{
+    margin-bottom: 50px;
+}
+.contact-container form .form-part {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.contact-container form input, 
+.contact-container form textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-container .button button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #087933;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+.contact-container form input:focus::placeholder,
+.contact-container form textarea:focus::placeholder {
+    opacity: 0.5;
+}
+.contact-container form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+.contact-container form .error {
+    color: #e23718;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.contact-container form .success-message {
+    display: none;
+    text-align: center;
+    color: #087933;
+    font-size: 18px;
+    margin-top: 20px;
+}
+/*DESCRIPTION SECTION*/
+.social-links .svg-container{
+    display: flex;
+    gap: 10px;
+}
+.social-links .svg-container img{
+    height: 48px;
+    width: 48px;
+} 
+
 /*SUSTAINABILITY STYLING*/
 .commitment{
     margin: 50px 50px 50px 0;
