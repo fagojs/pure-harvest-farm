@@ -1,3 +1,4 @@
+//NAV BAR
 // toggle ham-menu
 const hamMenu = document.querySelector('.ham-menu');
 const sideNav = document.querySelector('.side-nav');
@@ -7,6 +8,7 @@ hamMenu.addEventListener("click",()=>{
     sideNav.classList.toggle("active");
 })
 
+// HOME PAGE
 //full-view imgs-videos options when clicked
 function openView(mediaSrc, type) {
     // extract elements
@@ -41,7 +43,8 @@ function closeView() {
     document.getElementById("fullvideo").src = "";
 }
 
-// validate subscribe to newsletter form of footer section
+//FOOTER SECTION
+// validate subscribe to newsletter form
 document.getElementById('subscribe-button').addEventListener('click', function () {
     const emailInput = document.getElementById('subscribe-email');
     const checkboxInput = document.getElementById('subscribe-checkbox');
@@ -74,3 +77,38 @@ document.getElementById('subscribe-button').addEventListener('click', function (
     }
 
 });
+
+// CONTACT PAGE
+//validate form display error/success message
+document.getElementById("send-message").addEventListener("click",function(){
+    let isValid = true;
+
+    document.querySelectorAll(".error").forEach(errorField=>{
+        errorField.textContent = ""
+    })
+    // array of id's from form fields
+    const formInputFields = ['firstname', 'lastname', 'email', 'contactnumber', 'messagesubject', 'messagebody'];
+    formInputFields.forEach(inputField =>{
+        const field = document.getElementById(inputField);
+        const errorField = document.getElementById(`${inputField}-error`);
+
+        //if empty fields display message
+        if (!field.value.trim()) {
+            errorField.textContent = `${field.placeholder} is required!`;
+            errorField.style.display = "block";
+            isValid = false;
+        }else {
+            errorField.style.display = "none"; 
+        }
+    });
+
+    //if field are not empty
+    const successMessage = document.getElementById("successful");
+    if(isValid){
+        successMessage.style.display = "block";
+        setTimeout(() => {
+          successMessage.style.display = "none";
+          document.getElementById("contact-form").reset();
+        }, 3000);
+    }
+})
