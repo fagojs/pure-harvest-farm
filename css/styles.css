@@ -135,6 +135,17 @@ html, body{
     background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
     height: 200px;
 }
+
+/*PRODUCT BANNER*/
+#product-banner{
+    /* background-image: linear-gradient(-90deg, #ede9de 0%, #b18e5a 100%); */
+    background-image: linear-gradient(to right, #A5DD9B 10%, #C5EBAA 90%);
+    height: auto;
+    padding-bottom: 10px;
+}
+#product-innerbanner{
+    color: #1d355b;
+}
 /*SUSTAINABILITY BANNER*/
 #sustain-banner{
     height: 250px;
