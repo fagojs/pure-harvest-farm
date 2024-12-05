@@ -99,6 +99,25 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    // PRODUCT PAGE
+    if(pageId === "product-page"){
+        // add, remove active class
+        const productCards = document.querySelectorAll(".product-details");
+        productCards.forEach((card) => {
+            const closeButton = card.querySelector(".close-btn");
+        
+            card.addEventListener("click", (e) => {
+            e.stopPropagation();
+            card.classList.add("active");
+            });
+        
+            closeButton.addEventListener("click", (e) => {
+            e.stopPropagation(); // Prevent click from propagating to the card
+            card.classList.remove("active");
+            });
+        });
+    }
+
     //FOOTER SECTION
     // validate subscribe to newsletter form
     document.getElementById('subscribe-button').addEventListener('click', function () {
