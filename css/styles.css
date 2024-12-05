@@ -146,6 +146,14 @@ html, body{
 #product-innerbanner{
     color: #1d355b;
 }
+#product-innerbanner .features{
+    display: flex;
+    justify-content: space-around;
+}
+#product-innerbanner .features span{
+    font-weight:600;
+}
+
 /*SUSTAINABILITY BANNER*/
 #sustain-banner{
     height: 250px;
