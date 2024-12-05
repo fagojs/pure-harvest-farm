@@ -439,7 +439,7 @@ main .gallery-aroundfarms{
     display: none;
     background-color: #4CAF50;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
@@ -448,10 +448,16 @@ main .gallery-aroundfarms{
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-  
 .product-info p {
     font-size: 1rem;
     margin-bottom: 20px;
+}
+.product-details.active .product-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-out;
 }
   
 
