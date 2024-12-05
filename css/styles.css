@@ -459,6 +459,18 @@ main .gallery-aroundfarms{
     align-items: center;
     transition: all 0.5s ease-out;
 }
+.close-btn {
+    padding: 10px 15px;
+    background-color: white;
+    color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.close-btn:hover {
+    background-color: #f0f0f0;
+}
   
 
 /*FOOTER SECTION*/
