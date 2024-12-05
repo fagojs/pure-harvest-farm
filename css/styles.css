@@ -435,6 +435,24 @@ main .gallery-aroundfarms{
     font-size: 1.2rem;
     color: #333;
 }
+.product-info{
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.product-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
   
 
 /*FOOTER SECTION*/
