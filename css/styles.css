@@ -413,7 +413,7 @@ main .gallery-aroundfarms{
     width: 100%;
     cursor: pointer;
 }
-.product-intro{
+.product-section .product-intro{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -425,17 +425,17 @@ main .gallery-aroundfarms{
     text-align: center;
 }
   
-.product-intro img {
+.product-section .product-intro img {
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
 }
   
-.product-intro h3 {
+.product-section .product-intro h3 {
     font-size: 1.2rem;
     color: #333;
 }
-.product-info{
+.product-section .product-info{
     display: none;
     background-color: #4CAF50;
     color: white;
@@ -448,18 +448,29 @@ main .gallery-aroundfarms{
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.product-info p {
+.product-section .product-info img{
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    filter: invert(100%) brightness(100%);
+}
+.product-section .product-info img:hover {
+    filter:  invert(20%) sepia(100%) saturate(300%) hue-rotate(100deg);
+}
+.product-section .product-info p {
     font-size: 1rem;
     margin-bottom: 20px;
 }
-.product-details.active .product-info{
+.product-section .product-details.active .product-info{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all 0.5s ease-out;
 }
-.close-btn {
+.product-section .contact-btn {
     padding: 10px 15px;
     background-color: white;
     color: #4CAF50;
@@ -468,8 +479,8 @@ main .gallery-aroundfarms{
     cursor: pointer;
     font-size: 0.9rem;
 }
-.close-btn:hover {
-    background-color: #f0f0f0;
+.product-section .contact-btn:hover {
+   background-color: #f0f0f0;
 }
   
 
