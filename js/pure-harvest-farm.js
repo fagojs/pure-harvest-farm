@@ -104,14 +104,14 @@ document.addEventListener("DOMContentLoaded", () => {
         // add, remove active class
         const productCards = document.querySelectorAll(".product-details");
         productCards.forEach((card) => {
-            const closeButton = card.querySelector(".close-btn");
+            const svgCloseButton = card.querySelector(".svg-closebtn");
         
             card.addEventListener("click", (e) => {
             e.stopPropagation();
             card.classList.add("active");
             });
         
-            closeButton.addEventListener("click", (e) => {
+            svgCloseButton.addEventListener("click", (e) => {
             e.stopPropagation(); // Prevent click from propagating to the card
             card.classList.remove("active");
             });
