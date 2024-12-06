@@ -437,7 +437,7 @@ main .gallery-aroundfarms{
 }
 .product-section .product-info{
     display: none;
-    background-color: #4CAF50;
+    background-color: #087933;
     color: white;
     position: fixed;
     bottom: 0;
@@ -445,15 +445,21 @@ main .gallery-aroundfarms{
     left: 0;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    padding: 20px;
+    padding: 10px 20px 70px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product-section .product-info figure{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top:  10px;
 }
 .product-section .product-info img{
     height: 48px;
     width: 48px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
     filter: invert(100%) brightness(100%);
 }
 .product-section .product-info img:hover {
@@ -462,6 +468,22 @@ main .gallery-aroundfarms{
 .product-section .product-info p {
     font-size: 1rem;
     margin-bottom: 20px;
+}
+.product-section .product-info .additional-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 5px 10px 5px;
+}
+.product-section .product-info .additional-info .info-introduction,
+.product-section .product-info .additional-info .info-contact{
+    text-align: center;
+}
+.product-section .product-info .additional-info .info-introduction p,
+.product-section .product-info .additional-info .info-contact p,
+.product-section .product-info .additional-info h3{
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .product-section .product-details.active .product-info{
     display: flex;
@@ -473,7 +495,7 @@ main .gallery-aroundfarms{
 .product-section .contact-btn {
     padding: 10px 15px;
     background-color: white;
-    color: #4CAF50;
+    color: #087933;
     border: none;
     border-radius: 5px;
     cursor: pointer;
