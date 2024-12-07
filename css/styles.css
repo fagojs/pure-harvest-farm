@@ -8,13 +8,30 @@ body {
 }
 
 .navbar {
-  height: 50px;
-  padding: 0 10px;
+  height: 70px;
+  padding: 5px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background-image: linear-gradient(to right, #f0f0f0 0%, #fff 100%);
+}
+.navbar .logo{
+  height: 100%;
+}
+.navbar img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  filter: grayscale(50%) brightness(1.2);
+}
+
+.navbar img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  filter: grayscale(0%);
 }
 
 /*ham-menu on right side while toggled*/
@@ -873,6 +890,44 @@ footer .map-location .map-direction iframe {
 /*FOR MOBILE SCREEN SIZES*/
 @media only screen and (min-width: 610px) {
 
+   /*NAV CONTENT*/
+  /*show navigation links on the navbar and hide ham-menu*/
+  nav .side-nav {
+    position: static;
+    width: 80%;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+    transition: none;
+  }
+
+  nav .side-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  nav .side-nav li {
+    margin: 0;
+  }
+
+  nav .side-nav a {
+    text-decoration: none;
+    color: #010101;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  nav .side-nav a:hover {
+    color: #777;
+  }
+
+  nav .ham-menu {
+    display: none;
+  }
+
   /*HOME PAGE*/
   /*gallery responsiveness*/
   .gallery-aroundfarms .gallery-container .top-section {
@@ -981,43 +1036,6 @@ footer .map-location .map-direction iframe {
 /*MEDIUM DEVICES (TABLET)*/
 @media only screen and (min-width: 772px) {
 
-  /*NAV CONTENT*/
-  /*show navigation links on the navbar and hide ham-menu*/
-  nav .side-nav {
-    position: static;
-    width: 60%;
-    height: auto;
-    background-color: transparent;
-    box-shadow: none;
-    transition: none;
-  }
-
-  nav .side-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  nav .side-nav li {
-    margin: 0;
-  }
-
-  nav .side-nav a {
-    text-decoration: none;
-    color: #010101;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    font-size: 0.8rem;
-  }
-
-  nav .side-nav a:hover {
-    color: #777;
-  }
-
-  nav .ham-menu {
-    display: none;
-  }
-
   /*CONTACT PAGE*/
   .contact-container {
     margin: 50px 60px;
@@ -1094,6 +1112,9 @@ footer .map-location .map-direction iframe {
 
 /*FOR TABLET SCREEN SIZES*/
 @media only screen and (min-width: 992px) {
+  nav .side-nav{
+    width: 60%;
+  }
 
   /*BANNER CONTENT*/
   .banner {
@@ -1178,7 +1199,6 @@ footer .map-location .map-direction iframe {
 
 /*FOR DESKTOP SCREEN SIZES*/
 @media only screen and (min-width: 1198px) {
-
   /*HOME PAGE*/
   .gallery-aroundfarms {
     margin: 50px 70px;
