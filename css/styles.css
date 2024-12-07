@@ -403,6 +403,9 @@ main .gallery-aroundfarms{
 } 
 
 /*PRODUCT PAGE STYLING*/
+.product-section{
+    margin: 40px 20px;
+}
 /* Product List Styling */
 .product-section .product-list {
     height: auto;
@@ -451,6 +454,7 @@ main .gallery-aroundfarms{
     font-size: 1.2rem;
     color: #333;
 }
+/*hide at first*/
 .product-section .product-info{
     display: none;
     background-image: linear-gradient(45deg, #185001 10%, #087933 82%);
@@ -464,6 +468,7 @@ main .gallery-aroundfarms{
     padding: 10px 20px 70px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+/*svg color styling*/
 .product-section .product-info img{
     height: 48px;
     width: 48px;
@@ -496,12 +501,12 @@ main .gallery-aroundfarms{
     margin-bottom: 10px;
     margin-top: 10px;
 }
+/*When active*/
 .product-section .product-details.active .product-info{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 0.5s ease-out;
 }
 .product-section .contact-btn {
     padding: 10px 15px;
