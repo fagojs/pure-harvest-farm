@@ -103,18 +103,32 @@ document.addEventListener("DOMContentLoaded", () => {
     if(pageId === "product-page"){
         // add, remove active class
         const productCards = document.querySelectorAll(".product-details");
+
+        // function to remove active class from all product
+        const removeActiveClassFromAll = () => {
+            productCards.forEach((card) => {
+                card.classList.remove("active");
+            });
+        };
+
         productCards.forEach((card) => {
             const svgCloseButton = card.querySelector(".svg-closebtn");
         
             card.addEventListener("click", (e) => {
-            e.stopPropagation();
-            card.classList.add("active");
+                // Prevent click from propagating
+                e.stopPropagation();
+                removeActiveClassFromAll();
+                card.classList.add("active");
             });
         
             svgCloseButton.addEventListener("click", (e) => {
-            e.stopPropagation(); // Prevent click from propagating to the card
-            card.classList.remove("active");
+                e.stopPropagation();
+                card.classList.remove("active");
             });
+        });
+        // remove active class if the user clicks on empty space
+        document.addEventListener("click", () => {
+            removeActiveClassFromAll();
         });
     }
 
