@@ -1,144 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CONTACT</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
-</head>
-<body id="contact-page">
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin Sans"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="contact-page">
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html" class="link-home">
-                    <img src="index.html" alt="Pure Harvest Farm Logo">
-                </a>
-            </div>
-            <div class="side-nav">
-                <ul class="menu-items">
-                    <li id="menu-item">
-                        <a href="aboutus.html">ABOUT US</a>
-                    </li>
-                    <li id="menu-item">
-                        <a href="product.html">PRODUCTS</a>
-                    </li>
-                    <li id="menu-item">
-                        <a href="contact.html">CONTACT</a>
-                    </li>
-                    <li id="menu-item">
-                        <a href="sustainability.html">SUSTAINABILITY</a>
-                    </li>
-                </ul>
-            </div>           
-            <div class="ham-menu">
-                <span class="ham-bar"></span>
-                <span class="ham-bar"></span>
-                <span class="ham-bar"></span>
-            </div>
-        </nav>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html" class="link-home">
+            <img src="index.html" alt="Pure Harvest Farm Logo" />
+          </a>
+        </div>
+        <div class="side-nav">
+          <ul class="menu-items">
+            <li id="menu-item">
+              <a href="aboutus.html">ABOUT US</a>
+            </li>
+            <li id="menu-item">
+              <a href="product.html">PRODUCTS</a>
+            </li>
+            <li id="menu-item">
+              <a href="contact.html">CONTACT</a>
+            </li>
+            <li id="menu-item">
+              <a href="sustainability.html">SUSTAINABILITY</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ham-menu">
+          <span class="ham-bar"></span>
+          <span class="ham-bar"></span>
+          <span class="ham-bar"></span>
+        </div>
+      </nav>
     </header>
     <main>
-           <div class="contact-container">
-                <section class="form-section">
-                    <form class="contact-form" id = "contact-form">
-                        <div class="form-part">
-                            <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
-                            <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
-                        </div>
-                        <!-- error-container -->
-                        <p class ="error" id = "firstname-error"></p>
-                        <p class ="error" id = "lastname-error"></p>
-                        <div class="form-part">
-                            <input type="email" name="email" id="email" placeholder="Email" required>
-                            <input type="tel" name="contactnumber" id="contactnumber" placeholder="Contact Number" required>
-                        </div>
-                        <!-- error-container -->
-                        <p class ="error" id = "email-error"></p>
-                        <p class ="error" id = "contactnumber-error"></p>
-                        <div class="form-part">
-                            <input type="text" name="messagesubject" id="messagesubject" placeholder="Message Subject" required>
-                        </div>
-                        <!-- error-container -->
-                        <p class ="error" id = "messagesubject-error"></p>
-                        <div class="form-part">
-                            <textarea name="messagebody" id="messagebody" placeholder="Message Body" required></textarea>
-                        </div>
-                        <!-- error-container -->
-                        <p class ="error" id = "messagebody-error"></p>
-                        <div class="button">
-                            <button type="button" id="send-message">Send Message</button>
-                        </div>
-                        <!-- success-container -->
-                        <p class="success" id="successful">Your Message is sent successfully!</p>
-                    </form>
-                </section>
-                <section class="info-social">
-                    <div class="info-social-container">
-                        <section class="description">
-                            <h3>We are here to help!</h3>
-                            <p>We're here to assist you every step of the way. Whether you're looking for fresh produce, farm updates, or have any other questions, we're happy to help. Use the contact form, or choose one of our social sites to reach us. We look forward to supporting you in your pursuit of healthy, sustainable living!</p>
-                        </section>
-                        <section class="social-links">
-                            <h3>OUR SOCIAL</h3>
-                            <div class="svg-container">
-                                <a href="http://www.facebook.com" target="_blank">
-                                    <img src="./assets/svg/facebook_svg.svg" alt="Facebook Icon">
-                                </a>
-                                <a href="http://www.instagram.com" target="_blank">
-                                    <img src="./assets/svg/insta_svg.svg" alt="Instagram Icon">
-                                </a>
-                                <a href="http://www.x.com" target="_blank">
-                                    <img src="./assets/svg/x_svg.svg" alt="X Icon">
-                                </a>
-                                <a href="http://www.youtube.com" target="_blank">
-                                    <img src="./assets/svg/youtube_svg.svg" alt="Youtube Icon">
-                                </a>
-                            </div>
-                        </section>
-                    </div>
-                </section>
-           </div>
+      <div class="contact-container">
+        <section class="form-section">
+          <form class="contact-form" id="contact-form">
+            <div class="form-part">
+              <input
+                type="text"
+                name="firstname"
+                id="firstname"
+                placeholder="First Name"
+                required
+              />
+              <input
+                type="text"
+                name="lastname"
+                id="lastname"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+            <!-- error-container -->
+            <p class="error" id="firstname-error"></p>
+            <p class="error" id="lastname-error"></p>
+            <div class="form-part">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                required
+              />
+              <input
+                type="tel"
+                name="contactnumber"
+                id="contactnumber"
+                placeholder="Contact Number"
+                required
+              />
+            </div>
+            <!-- error-container -->
+            <p class="error" id="email-error"></p>
+            <p class="error" id="contactnumber-error"></p>
+            <div class="form-part">
+              <input
+                type="text"
+                name="messagesubject"
+                id="messagesubject"
+                placeholder="Message Subject"
+                required
+              />
+            </div>
+            <!-- error-container -->
+            <p class="error" id="messagesubject-error"></p>
+            <div class="form-part">
+              <textarea
+                name="messagebody"
+                id="messagebody"
+                placeholder="Message Body"
+                required
+              ></textarea>
+            </div>
+            <!-- error-container -->
+            <p class="error" id="messagebody-error"></p>
+            <div class="button">
+              <button type="button" id="send-message">Send Message</button>
+            </div>
+            <!-- success-container -->
+            <p class="success" id="successful">
+              Your Message is sent successfully!
+            </p>
+          </form>
+        </section>
+        <section class="info-social">
+          <div class="info-social-container">
+            <section class="description">
+              <h3>We are here to help!</h3>
+              <p>
+                We're here to assist you every step of the way. Whether you're
+                looking for fresh produce, farm updates, or have any other
+                questions, we're happy to help. Use the contact form, or choose
+                one of our social sites to reach us. We look forward to
+                supporting you in your pursuit of healthy, sustainable living!
+              </p>
+            </section>
+            <section class="social-links">
+              <h3>OUR SOCIAL</h3>
+              <div class="svg-container">
+                <a href="http://www.facebook.com" target="_blank">
+                  <img
+                    src="./assets/svg/facebook_svg.svg"
+                    alt="Facebook Icon"
+                  />
+                </a>
+                <a href="http://www.instagram.com" target="_blank">
+                  <img src="./assets/svg/insta_svg.svg" alt="Instagram Icon" />
+                </a>
+                <a href="http://www.x.com" target="_blank">
+                  <img src="./assets/svg/x_svg.svg" alt="X Icon" />
+                </a>
+                <a href="http://www.youtube.com" target="_blank">
+                  <img src="./assets/svg/youtube_svg.svg" alt="Youtube Icon" />
+                </a>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
     </main>
     <footer>
-        <div class="footer-container">
-            <section class="footer-topsection">
-                <div class="openinghours">
-                    <h2>Opening Hours</h2>
-                    <div class="hours">
-                        <p id="time">Mon - Fri: 8am - 8pm</p>
-                        <p id="time">​Saturday: 9am - 7pm</p>
-                        <p id="time">​Sunday: 9am - 8pm</p>
-                    </div>
-                </div>
-                <div class="subscribe-newsletter">
-                    <h2>Stay Up To Date</h2>
-                    <p>Subscribe to our newsletter</p>
-                    <form action="#" class="footer-form" id="footer-form">
-                        <input type="email" id="subscribe-email" name="subscribe-email" placeholder="Enter Your Email here" required>
-                        <span>
-                            <input type="checkbox" id="subscribe-checkbox" name="subscribe-checkbox" required>
-                            Yes, subscribe me to newsletter.
-                        </span>
-                        <button type="button" id="subscribe-button">Subscribe</button>
-                        <p id="success-message">Subscribed successfully!</p>
-                        <p id="failed-message">Please provide correct email format and ensure the check box is ticked!</p>
-                    </form>
-                </div>    
-            </section>
-            <section class="map-location">
-                    <div class="map-direction">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.0660198573064!2d151.2109059!3d-33.8621894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae69daa2f96f%3A0x735f85193da40a66!2s31%20Alfred%20St%2C%20Sydney%20NSW%202000!5e0!3m2!1sen!2sau!4v1732612718192!5m2!1sen!2sau" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="location-address">
-                        <p class="address">21-27 Meadow Crescent<br>Meadowbank, NSW 2114</p>
-                    </div>
-            </section>
-        </div>
-        <section class="privacy-policy">
-                <p id="privacy-policy">&#xA9; <script>document.write(new Date().getFullYear());</script> Pure Harvest Farm | <a href="#" target="_blank">Privacy Policy</a></p>
+      <div class="footer-container">
+        <section class="footer-topsection">
+          <div class="openinghours">
+            <h2>Opening Hours</h2>
+            <div class="hours">
+              <p id="time">Mon - Fri: 8am - 8pm</p>
+              <p id="time">​Saturday: 9am - 7pm</p>
+              <p id="time">​Sunday: 9am - 8pm</p>
+            </div>
+          </div>
+          <div class="subscribe-newsletter">
+            <h2>Stay Up To Date</h2>
+            <p>Subscribe to our newsletter</p>
+            <form action="#" class="footer-form" id="footer-form">
+              <input
+                type="email"
+                id="subscribe-email"
+                name="subscribe-email"
+                placeholder="Enter Your Email here"
+                required
+              />
+              <span>
+                <input
+                  type="checkbox"
+                  id="subscribe-checkbox"
+                  name="subscribe-checkbox"
+                  required
+                />
+                Yes, subscribe me to newsletter.
+              </span>
+              <button type="button" id="subscribe-button">Subscribe</button>
+              <p id="success-message">Subscribed successfully!</p>
+              <p id="failed-message">
+                Please provide correct email format and ensure the check box is
+                ticked!
+              </p>
+            </form>
+          </div>
         </section>
+        <section class="map-location">
+          <div class="map-direction">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.0660198573064!2d151.2109059!3d-33.8621894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae69daa2f96f%3A0x735f85193da40a66!2s31%20Alfred%20St%2C%20Sydney%20NSW%202000!5e0!3m2!1sen!2sau!4v1732612718192!5m2!1sen!2sau"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="location-address">
+            <p class="address">
+              21-27 Meadow Crescent<br />Meadowbank, NSW 2114
+            </p>
+          </div>
+        </section>
+      </div>
+      <section class="privacy-policy">
+        <p id="privacy-policy">
+          &#xA9;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Pure Harvest Farm | <a href="#" target="_blank">Privacy Policy</a>
+        </p>
+      </section>
     </footer>
     <script type="text/javascript" src="./js/pure-harvest-farm.js"></script>
-</body>
+  </body>
 </html>
