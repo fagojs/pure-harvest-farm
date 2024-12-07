@@ -13,41 +13,25 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   background-image: linear-gradient(to right, #f0f0f0 0%, #fff 100%);
 }
-.navbar .logo{
+
+.navbar .logo {
   height: 100%;
 }
-.navbar img{
+
+.navbar .logo img {
   height: 100%;
   width: 100%;
   border-radius: 50%;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  filter: grayscale(50%) brightness(1.2);
 }
 
-.navbar img:hover {
+.navbar .logo img:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  filter: grayscale(0%);
-}
-
-/*ham-menu on right side while toggled*/
-.side-nav {
-  background-color: #ede9de;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: -300px;
-  font-size: 1rem;
-  transition: 0.3s ease;
-  z-index: 9;
-}
-
-.side-nav.active {
-  right: 0;
 }
 
 /* hamburger design */
@@ -60,7 +44,7 @@ body {
 .ham-bar {
   height: 5px;
   width: 100%;
-  background-color: #010101;
+  background-color: #087933;
   border-radius: 25px;
   position: absolute;
   top: 50%;
@@ -95,10 +79,31 @@ body {
   /*bring to center and rotate*/
 }
 
+/*ham-menu on right side while toggled*/
+.side-nav {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  background-color: #ede9de;
+  height: 100vh;
+  font-size: 1rem;
+  padding: 20px;
+  z-index: 9;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.side-nav.active {
+  right: 0;
+  transform: translateX(0);
+}
+
 /*nav-links menu*/
 .side-nav ul {
   position: relative;
   top: 10%;
+  padding: 0;
 }
 
 .side-nav li {
@@ -107,8 +112,18 @@ body {
 }
 
 .side-nav a {
+  text-decoration: none;
   color: #010101;
-  font-weight: 600;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.side-nav a:hover {
+  background-color: #087933;
+  color: #fff;
 }
 
 /*banner*/
@@ -890,7 +905,7 @@ footer .map-location .map-direction iframe {
 /*FOR MOBILE SCREEN SIZES*/
 @media only screen and (min-width: 610px) {
 
-   /*NAV CONTENT*/
+  /*NAV CONTENT*/
   /*show navigation links on the navbar and hide ham-menu*/
   nav .side-nav {
     position: static;
@@ -1112,7 +1127,7 @@ footer .map-location .map-direction iframe {
 
 /*FOR TABLET SCREEN SIZES*/
 @media only screen and (min-width: 992px) {
-  nav .side-nav{
+  nav .side-nav {
     width: 60%;
   }
 
@@ -1199,6 +1214,7 @@ footer .map-location .map-direction iframe {
 
 /*FOR DESKTOP SCREEN SIZES*/
 @media only screen and (min-width: 1198px) {
+
   /*HOME PAGE*/
   .gallery-aroundfarms {
     margin: 50px 70px;
