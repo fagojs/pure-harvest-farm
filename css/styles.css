@@ -905,6 +905,14 @@ footer .map-location .map-direction iframe {
           width: 30%;
       }
 
+      /*PRODUCT PAGE*/
+      .product-section .product-details {
+        width: 30%;
+      }
+      .product-section .product-details.active .product-info{
+        justify-content: space-between;
+      }
+
      /*CONTACT PAGE*/
     .contact-container{
         display: flex;
@@ -945,6 +953,15 @@ footer .map-location .map-direction iframe {
         height: 282px;
         width: 282px;
     }
+
+      /*PRODUCT PAGE*/
+      .product-section .product-details {
+        height: 450px;
+      }
+      .product-section .product-info .additional-info{
+        padding-left: 40px;
+        padding-right: 40px;
+      }
 
     /*FOOTER CONTENT*/
     footer .footer-topsection{
