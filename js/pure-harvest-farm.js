@@ -15,6 +15,26 @@ document.addEventListener("DOMContentLoaded", () => {
   // HOME PAGE
   if (pageId === "home-page") {
     //full-view imgs-videos options when clicked
+    const imageContent = document.querySelectorAll(".image-group");
+    const videoContent = document.querySelectorAll(".video-group");
+
+    imageContent.forEach((img) => {
+      img.addEventListener("click", (event) => {
+        const mediaSrc = event.target.getAttribute("src");
+        openView(mediaSrc, "image");
+      });
+    });
+    videoContent.forEach((vid) => {
+      vid.addEventListener("click", (event) => {
+        const mediaSrc = event.target.getAttribute("src");
+        openView(mediaSrc, "video");
+      });
+    });
+
+    document.querySelector(".closeview").addEventListener("click", () => {
+      closeView();
+    });
+
     function openView(mediaSrc, type) {
       // extract elements
       const fullView = document.getElementById("fullview");
