@@ -662,11 +662,17 @@ footer .map-location .map-direction iframe {
         flex-direction: column;
         width: 92%;
     }
+    
+    /*PRODUCT PAGE*/
+    .product-section{
+        margin: 40px auto;
+    }
 
     /*FOOTER CONTENT*/
     .footer-form input[type="email"], .inner-banner button {
         width: 90%;
     }
+
 }
 
 /*FOR MOBILE SCREEN SIZES*/
