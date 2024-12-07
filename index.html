@@ -64,7 +64,7 @@
             <section class="top-section-first">
               <div class="video-section">
                 <video
-                  onclick="openView('./assets/videos/farm_video.mp4', 'video')"
+                  class="video-group"
                   autoplay
                   muted
                   loop
@@ -84,14 +84,14 @@
                 <img
                   src="./assets/images/farm_1.jpg"
                   alt="around the farm"
-                  onclick="openView('./assets/images/farm_1.jpg', 'image')"
+                  class="image-group"
                 />
               </figure>
               <figure class="image-section">
                 <img
                   src="./assets/images/farm_2.jpg"
                   alt="around the farm"
-                  onclick="openView('./assets/images/farm_2.jpg', 'image')"
+                  class="image-group"
                 />
               </figure>
             </section>
@@ -101,35 +101,35 @@
               <img
                 src="./assets/images/farm_3.jpg"
                 alt="around the farm"
-                onclick="openView('./assets/images/farm_3.jpg', 'image')"
+                class="image-group"
               />
             </figure>
             <figure class="image-section">
               <img
                 src="./assets/images/farm_4.jpg"
                 alt="around the farm"
-                onclick="openView('./assets/images/farm_4.jpg', 'image')"
+                class="image-group"
               />
             </figure>
             <figure class="image-section">
               <img
                 src="./assets/images/farm_5.jpg"
                 alt="around the farm"
-                onclick="openView('./assets/images/farm_5.jpg', 'image')"
+                class="image-group"
               />
             </figure>
             <figure class="image-section">
               <img
                 src="./assets/images/farm_6.jpg"
                 alt="around the farm"
-                onclick="openView('./assets/images/farm_6.jpg', 'image')"
+                class="image-group"
               />
             </figure>
           </section>
         </div>
         <!-- Structure for Full View -->
         <div id="fullview" class="fullview">
-          <span class="closeview" onclick="closeView()">&times;</span>
+          <span class="closeview">&times;</span>
           <div class="fullview-content">
             <img id="fullimage" src="" alt="Full view" download />
             <video id="fullvideo" controls></video>
