@@ -599,76 +599,76 @@ main .gallery-aroundfarms {
 }
 
 /*SUSTAINABILITY STYLING*/
-.commitment{
+.commitment {
   margin: 50px 50px 50px 0;
 }
-.practices{
+.practices {
   margin: 0 0 50px 50px;
 }
-.commitment .commitment-container, 
-.practices .practices-container{
+.commitment .commitment-container,
+.practices .practices-container {
   width: 100%;
   display: flex;
   flex-direction: column;
-} 
-.commitment-container .commitment-description{
+}
+.commitment-container .commitment-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 20px;
 }
-.commitment-container .commitment-image img{
+.commitment-container .commitment-image img {
   width: 100%;
   height: 100%;
-  box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.25);
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-.practices-container .practices-description{
+.practices-container .practices-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 20px; 
+  padding-right: 20px;
 }
-.practices-container .practices-image img{
+.practices-container .practices-image img {
   width: 100%;
   height: 100%;
-  box-shadow: -4px 4px 4px 0px rgba(0,0,0,0.25);
+  box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
-.partners-container ul{
+.partners-container ul {
   padding-left: 0;
 }
-.practices-container li{
+.practices-container li {
   list-style-type: square;
   margin-bottom: 10px;
 }
-.commitment-container .commitment-description p, 
-.practices-container .practices-description ul{
+.commitment-container .commitment-description p,
+.practices-container .practices-description ul {
   margin-top: 0;
 }
-.commitment-container .commitment-description h3, 
-.practices-container .practices-description h3{
+.commitment-container .commitment-description h3,
+.practices-container .practices-description h3 {
   color: #087933;
 }
-.commitment-container .commitment-image, 
-.practices-container .practices-image{
+.commitment-container .commitment-image,
+.practices-container .practices-image {
   width: 100%;
   height: auto;
 }
-.supporting-partners{
+.supporting-partners {
   height: auto;
   margin: 0 20px 50px 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.supporting-partners h3{
+.supporting-partners h3 {
   margin: 5px;
   text-align: center;
 }
-.supporting-partners .partners-container{
+.supporting-partners .partners-container {
   height: auto;
   margin: 0 auto;
   display: flex;
@@ -677,12 +677,12 @@ main .gallery-aroundfarms {
   align-items: center;
   flex-wrap: wrap;
 }
-.partners-container figure{
+.partners-container figure {
   height: 150px;
   width: 150px;
   margin: 10px;
 }
-.partners-container figure img{
+.partners-container figure img {
   height: 100%;
   width: 100%;
   border-radius: 5px;
@@ -813,7 +813,6 @@ footer .map-location .map-direction iframe {
 
 /*FOR SMALL SCREEN SIZES*/
 @media only screen and (max-width: 350px) {
-
   /*HOME PAGE*/
   .gallery-container figure {
     width: 100%;
@@ -858,7 +857,6 @@ footer .map-location .map-direction iframe {
 
 /*FOR MOBILE SCREEN SIZES*/
 @media only screen and (min-width: 610px) {
-
   /*HOME PAGE*/
   /*gallery responsiveness*/
   .gallery-container .top-section {
@@ -963,7 +961,6 @@ footer .map-location .map-direction iframe {
 
 /*MEDIUM DEVICES (TABLET)*/
 @media only screen and (min-width: 772px) {
-
   /*NAV CONTENT*/
   /*show navigation links on the navbar and hide ham-menu*/
   nav .side-nav {
@@ -1087,7 +1084,6 @@ footer .map-location .map-direction iframe {
 
 /*FOR TABLET SCREEN SIZES*/
 @media only screen and (min-width: 992px) {
-
   /*BANNER CONTENT*/
   .banner {
     height: 300px;
@@ -1170,7 +1166,6 @@ footer .map-location .map-direction iframe {
 
 /*FOR DESKTOP SCREEN SIZES*/
 @media only screen and (min-width: 1198px) {
-
   /*HOME PAGE*/
   .gallery-aroundfarms {
     margin: 20px;
