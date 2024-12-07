@@ -765,14 +765,6 @@ footer .map-location .map-direction iframe {
 
   /*MEDIUM DEVICES (TABLET)*/
   @media only screen and (min-width: 772px) {
-    /*HOME PAGE*/
-    .gallery-aroundfarms{
-        margin: 15px;
-    }
-    .gallery-container figure{
-        height: 178px;
-        width: 178px;
-    }
 
     /*NAV CONTENT*/
     /*show navigation links on the navbar and hide ham-menu*/
@@ -806,6 +798,16 @@ footer .map-location .map-direction iframe {
         display: none;
     }
 
+    /*HOME PAGE*/
+    .gallery-aroundfarms{
+        margin: 15px;
+    }
+    .gallery-container figure{
+        height: 178px;
+        width: 178px;
+    }
+
+
     /*CONTACT PAGE*/
     .contact-container{
         margin: 50px 60px;
@@ -818,6 +820,33 @@ footer .map-location .map-direction iframe {
     .info-social-container .description,
     .info-social-container .social-links{
         flex: 1;
+    }
+
+    /*PRODUCT PAGE*/
+    .product-section .product-list{
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .product-section .product-details {
+        position: relative;
+        width: 45%;
+        height: 350px;
+    }
+      .product-section .product-intro, .product-section .product-info{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .product-section .product-intro {
+        flex-direction: column;
+    }
+    .product-section .product-intro img {
+        max-width: 100%;
     }
 
     /*SUSTAINABILITY PAGE*/
