@@ -662,7 +662,7 @@ footer .map-location .map-direction iframe {
         flex-direction: column;
         width: 92%;
     }
-    
+
     /*PRODUCT PAGE*/
     .product-section{
         margin: 40px auto;
@@ -732,8 +732,14 @@ footer .map-location .map-direction iframe {
         order: -1; 
     }
 
-    /*CONTACT PAGE*/
-    
+    /*PRODUCT PAGE*/
+    .product-section .product-intro{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .product-section .product-intro img {
+        max-width: 60%;
+    }
 
     /*SUSTAINABILITY PAGE*/
     .commitment-container .commitment-description{
