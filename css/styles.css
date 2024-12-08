@@ -1,3 +1,9 @@
+/*global focus style*/
+:focus {
+  outline: 3px solid #FFD700; 
+  border-radius: 5px; 
+}
+
 html,
 body {
   height: 100vh;
@@ -267,6 +273,10 @@ body {
   object-fit: cover;
   /*fill container*/
   cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+.gallery-aroundfarms .video-section video:hover{
+  opacity: 0.9;
 }
 
 .gallery-aroundfarms .gallery-container .top-section-aside {
@@ -295,6 +305,12 @@ body {
   height: 100%;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.gallery-aroundfarms .gallery-container img:hover{
+  transform: scale(0.98);
+  opacity: 0.9;
 }
 
 /*Full-view media styling*/
@@ -825,7 +841,6 @@ footer .footer-topsection {
 /* Map and Address Section */
 footer .map-location .map-direction iframe {
   border: 1px solid #777;
-  border-radius: 10px;
   width: 80%;
   height: 200px;
 }
