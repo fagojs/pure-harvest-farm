@@ -1,7 +1,7 @@
 /*global focus style*/
 :focus {
-  outline: 3px solid #FFD700; 
-  border-radius: 5px; 
+  outline: 3px solid #FFD700;
+  border-radius: 5px;
 }
 
 html,
@@ -190,11 +190,13 @@ body {
   /* background-image: linear-gradient(-90deg, #ede9de 0%, #b18e5a 100%); */
   background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
 }
-#about-banner h2{
-  color: #ffd700; 
+
+#about-banner h2 {
+  color: #ffd700;
   font-weight: bold;
 }
-#about-banner p{
+
+#about-banner p {
   font-size: 18px;
   line-height: 1.2;
 }
@@ -206,12 +208,13 @@ body {
 
 @keyframes fadeIn {
   0% {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
+
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -298,7 +301,8 @@ body {
   cursor: pointer;
   transition: opacity 0.3s ease-in-out;
 }
-.gallery-aroundfarms .video-section video:hover{
+
+.gallery-aroundfarms .video-section video:hover {
   opacity: 0.9;
 }
 
@@ -331,7 +335,7 @@ body {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.gallery-aroundfarms .gallery-container img:hover{
+.gallery-aroundfarms .gallery-container img:hover {
   transform: scale(0.98);
   opacity: 0.9;
 }
@@ -427,6 +431,7 @@ body {
   line-height: 1.6;
   background-color: #ede9de;
 }
+
 .whoweare-container .whoweare-description p,
 .whatwedo-container .whatwedo-description p {
   margin-top: 0;
@@ -452,11 +457,12 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 .whoweare-container .whoweare-image img:hover,
-.whatwedo-container .whatwedo-image img:hover{
+.whatwedo-container .whatwedo-image img:hover {
   transform: scale(1.01);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-} 
+}
 
 /*CONTACT PAGE*/
 /*FORM SECTION*/
@@ -959,6 +965,7 @@ footer .map-location .map-direction iframe {
   .inner-banner {
     padding: 20px 40px;
   }
+
   /*NAV CONTENT*/
   /*show navigation links on the navbar and hide ham-menu*/
   .navbar .side-nav {
@@ -1041,31 +1048,6 @@ footer .map-location .map-direction iframe {
     max-height: 55%;
   }
 
-  /*ABOUT US PAGE*/
-  .whoweare .whoweare-container,
-  .whatwedo .whatwedo-container {
-    flex-direction: row;
-  }
-
-  .whoweare-container .whoweare-description {
-    width: 50%;
-    padding-right: 20px;
-  }
-
-  .whatwedo-container .whatwedo-description {
-    width: 50%;
-    padding-left: 20px;
-  }
-
-  .whoweare-container .whoweare-image,
-  .whatwedo-container .whatwedo-image {
-    width: 50%;
-  }
-
-  .whatwedo-container .whatwedo-image {
-    order: -1;
-  }
-
   /*PRODUCT PAGE*/
   .product-section .product-intro {
     flex-direction: row;
@@ -1109,6 +1091,52 @@ footer .map-location .map-direction iframe {
   .inner-banner {
     padding: 20px 60px;
   }
+
+  /*ABOUT US PAGE*/
+  .whoweare .whoweare-container,
+  .whatwedo .whatwedo-container {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .whoweare-container .whoweare-description,
+  .whatwedo-container .whatwedo-description {
+    width: 50%;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .whoweare-container .whoweare-image,
+  .whatwedo-container .whatwedo-image {
+    width: 50%;
+  }
+
+  .whoweare-container .whoweare-image img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .whatwedo-container .whatwedo-image img {
+    width: 100%;
+    height: 100%;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .whoweare-container .whoweare-image img:hover {
+    box-shadow: 8px 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .whatwedo-container .whatwedo-image img:hover {
+    box-shadow: -8px 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .whatwedo-container .whatwedo-image {
+    order: -1;
+  }
+
   /*CONTACT PAGE*/
   .contact-container {
     margin: 50px 60px;
@@ -1208,18 +1236,6 @@ footer .map-location .map-direction iframe {
     gap: 15px;
   }
 
-  /*ABOUT US PAGE*/
-  .whoweare .whoweare-container,
-  .whatwedo .whatwedo-container {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .whatwedo-container .whatwedo-description,
-  .whoweare-container .whoweare-description {
-    width: 30%;
-  }
-
   /*PRODUCT PAGE*/
   .product-section .product-details {
     width: 30%;
@@ -1271,6 +1287,15 @@ footer .map-location .map-direction iframe {
   /*HOME PAGE*/
   .gallery-aroundfarms {
     margin: 50px 70px;
+  }
+
+  /*ABOUT US PAGE*/
+  .whatwedo-container .whatwedo-description,
+  .whoweare-container .whoweare-description {
+    width: 40%;
+    padding: 100px;
+    line-height: 1.6;
+    font-size: 18px;
   }
 
   /*PRODUCT PAGE*/
