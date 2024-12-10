@@ -489,8 +489,9 @@ body {
   border-radius: 5px;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
+
 .contact-container form input:focus,
-.contact-container form textarea:focus{
+.contact-container form textarea:focus {
   box-shadow: 0 0 5px rgba(60, 141, 99, 0.5);
   outline: none;
   border-color: #087933;
@@ -538,40 +539,46 @@ body {
 }
 
 /*description section*/
-.contact-container .info-social-container{
+.contact-container .info-social-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.contact-container .info-social-container h3{
+
+.contact-container .info-social-container h3 {
   font-size: 22px;
   color: #087933;
 }
-.contact-container .info-social-container p{
+
+.contact-container .info-social-container p {
   font-size: 16px;
   line-height: 1.6;
 }
+
 .contact-container .social-links .svg-container {
   display: flex;
   gap: 10px;
 }
-.contact-container .social-links .svg-container a{
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    cursor: pointer;
+
+.contact-container .social-links .svg-container a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
 }
-.contact-container .social-links .svg-container a:hover{
+
+.contact-container .social-links .svg-container a:hover {
   transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 .social-links .svg-container img {
   height: 24px;
   width: 24px;
@@ -1174,14 +1181,13 @@ footer .map-location .map-direction iframe {
     margin: 50px 60px;
   }
 
-  .info-social-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  .contact-container .info-social-container {
+    flex-direction: row;
+    gap: 30px;
   }
 
-  .info-social-container .description,
-  .info-social-container .social-links {
+  .contact-container .info-social-container .description,
+  .contact-container .info-social-container .social-links {
     flex: 1;
   }
 
@@ -1280,21 +1286,23 @@ footer .map-location .map-direction iframe {
   /*CONTACT PAGE*/
   .contact-container {
     display: flex;
+    flex-direction: row;
     gap: 30px;
     margin: 50px;
   }
 
-  .info-social-container {
+  .contact-container .info-social-container {
     flex-direction: column;
-    align-items: flex-start;
   }
 
-  .info-social-container h3 {
+  .contact-container .info-social-container h3 {
     margin-top: 0;
   }
 
   .contact-container .form-section {
     width: 60%;
+    height: 100%;
+    margin: auto;
   }
 
   .contact-container .info-social {
