@@ -133,7 +133,7 @@ body {
 .banner {
   width: 100%;
   min-height: 350px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   margin-top: 10px;
   display: flex;
   justify-content: center;
@@ -189,7 +189,30 @@ body {
 #about-banner {
   /* background-image: linear-gradient(-90deg, #ede9de 0%, #b18e5a 100%); */
   background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
-  height: 200px;
+}
+#about-banner h2{
+  color: #ffd700; 
+  font-weight: bold;
+}
+#about-banner p{
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/*Text animation to slowly fade in the banner*/
+#about-innerbanner {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 /*PRODUCT BANNER*/
@@ -390,6 +413,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
 .whoweare-container .whoweare-description,
@@ -397,8 +421,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: #ede9de;
 }
-
 .whoweare-container .whoweare-description p,
 .whatwedo-container .whatwedo-description p {
   margin-top: 0;
@@ -407,6 +435,8 @@ body {
 .whoweare-container .whoweare-description h3,
 .whatwedo-container .whatwedo-description h3 {
   color: #087933;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .whoweare-container .whoweare-image,
@@ -419,8 +449,14 @@ body {
 .whatwedo-container .whatwedo-image img {
   width: 100%;
   height: 100%;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+.whoweare-container .whoweare-image img:hover,
+.whatwedo-container .whatwedo-image img:hover{
+  transform: scale(1.01);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+} 
 
 /*CONTACT PAGE*/
 /*FORM SECTION*/
