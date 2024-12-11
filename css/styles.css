@@ -661,16 +661,28 @@ body {
 /*-----------------------------------SUSTAINABILITY PAGE-------------------------------------*/
 /*SUSTAINABILITY BANNER*/
 #sustain-banner {
-  height: 250px;
   width: 100%;
   background-image: url("../assets/images/sustain_banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #sustain-banner h2 {
-  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+#sustain-banner h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-top: 0;
 }
 
 /*Main content*/
