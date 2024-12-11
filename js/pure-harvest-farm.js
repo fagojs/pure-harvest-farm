@@ -158,7 +158,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       svgCloseButton.addEventListener("click", (e) => {
         e.stopPropagation();
-        card.classList.remove("active");
+        // remove outline
+        card.blur();
+        // remove active class
+        removeActiveClassFromAll();
       });
     });
     // remove active class if the user clicks on empty space
