@@ -208,8 +208,12 @@ body {
 }
 
 .gallery-aroundfarms h2 {
-  margin: 10px;
+  color: #087933;
+  font-weight: bold;
+  line-height: 1.5;
   text-align: center;
+  margin: 10px;
+  text-transform: uppercase;
 }
 
 
@@ -663,14 +667,18 @@ body {
 /*SUSTAINABILITY BANNER*/
 #sustain-banner {
   width: 100%;
-  background-image: url("../assets/images/sustain_banner.jpg");
-  background-position: center;
+  /* background-image: url("../assets/images/sustain_banner.jpg"); */
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  /* background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
+  color: #fff; */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#sustain-innerbanner{
+  animation: fadeIn 2s ease-in-out;
 }
 
 #sustain-banner h2 {
@@ -678,12 +686,14 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
   line-height: 1.6;
+  color: #ffd700;
 }
 
 #sustain-banner h3 {
   font-size: 1.5rem;
   font-weight: normal;
   margin-top: 0;
+  color: #fff;
 }
 
 /*Main content*/
