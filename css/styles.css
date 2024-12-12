@@ -651,11 +651,12 @@ body {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
 }
 
 .product-section .contact-btn:hover {
   background-color: #f0f0f0;
+  transform: scale(1.1);
 }
 
 /*-----------------------------------SUSTAINABILITY PAGE-------------------------------------*/
@@ -1457,9 +1458,16 @@ footer .map-location .map-direction iframe {
   }
 
   .product-section .product-info {
-    justify-content: space-between;
+    padding: 0;
   }
-
+  .product-section .product-info figure {
+    align-self: flex-end;
+    margin-right: 10px;
+  }
+  .product-section .product-info .info-introduction p,
+  .product-section .product-info .info-contact p{
+    margin-bottom: 0;
+  }
   /*-----------------------------------CONTACT PAGE-------------------------------------*/
   .contact-container {
     display: flex;
