@@ -974,7 +974,7 @@ footer .footer-topsection {
 .openinghours h2 {
   color: #1d355b;
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .openinghours .hours p {
@@ -986,13 +986,13 @@ footer .footer-topsection {
 .subscribe-newsletter h2 {
   color: #087933;
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .subscribe-newsletter p {
   color: #087933;
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .footer-form {
@@ -1009,6 +1009,19 @@ footer .footer-topsection {
   font-size: 14px;
   margin: 0 auto;
 }
+.footer-form input[type="checkbox"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.footer-form input[type="email"]:focus {
+  box-shadow: 0 0 5px rgba(60, 141, 99, 0.5);
+  outline: none;
+  border-color: #087933;
+}
+
 
 .footer-form span {
   font-size: 12px;
@@ -1023,21 +1036,22 @@ footer .footer-topsection {
   border-radius: 5px;
   font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.3s ease-in-out;
 }
 
 .footer-form button:hover {
-  background-color: #055825;
+  transform: scale(1.02);
 }
 
 #success-message,
 #failed-message {
+  width: 70%;
   display: none;
   color: #fff;
   border-radius: 5px;
   padding: 8px;
+  margin: 0 auto;
 }
-
 /* Map and Address Section */
 footer .map-location .map-direction iframe {
   border: 1px solid #777;
