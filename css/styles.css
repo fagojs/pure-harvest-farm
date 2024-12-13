@@ -16,7 +16,7 @@ body {
 /*-----------------------------------NAV SECTION-------------------------------------*/
 .navbar {
   height: 70px;
-  padding: 5px 10px;
+  padding: 5px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -128,9 +128,6 @@ body {
 .navbar .side-nav a:hover {
   background-color: #087933;
   color: #fff;
-}
-.navbar .side-nav a:focus{
-
 }
 .navbar .side-nav a.active{
   background-color: #087933;
