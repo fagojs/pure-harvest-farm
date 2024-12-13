@@ -1,16 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
   //NAV BAR
-  // toggle ham-menu
   const hamMenu = document.querySelector(".ham-menu");
   const sideNav = document.querySelector(".side-nav");
 
+  const menuItems = document.querySelectorAll(".navbar .side-nav a");
+
+  // current page id
+  const pageId = document.body.id;
+
+  //get current page by removing '/' infront of pathname
+  const currentPage = window.location.pathname.split("/").pop();
+  // console.log(currentPage);
+
+  // toggle ham-menu
   hamMenu.addEventListener("click", () => {
     hamMenu.classList.toggle("active");
     sideNav.classList.toggle("active");
   });
 
-  // current page id
-  const pageId = document.body.id;
+  //add,remove active class to selected nav link
+  menuItems.forEach((menu) => {
+    // console.log(menu.getAttribute("href"))
+    if (menu.getAttribute("href") === currentPage) {
+      menu.classList.add("active");
+    }
+  });
 
   // HOME PAGE
   if (pageId === "home-page") {
