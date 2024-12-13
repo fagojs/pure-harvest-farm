@@ -63,7 +63,6 @@ body {
   /*above overlay and content*/
   z-index: 1001;
 }
-
 .navbar .ham-bar:nth-child(1) {
   top: 25%;
 }
@@ -1215,6 +1214,10 @@ footer .map-location .map-direction iframe {
   .navbar .ham-menu {
     display: none;
   }
+  .overlay.active{
+    display: none;
+  }
+
 
   /*-----------------------------------HOME PAGE-------------------------------------*/
   /*gallery responsiveness*/
