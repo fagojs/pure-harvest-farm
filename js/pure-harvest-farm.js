@@ -201,25 +201,28 @@ document.addEventListener("DOMContentLoaded", () => {
         !emailPattern.test(emailInput.value) ||
         !checkboxInput.checked
       ) {
+        // Show failed message
         failedMessage.style.display = "block";
         failedMessage.style.backgroundColor = "#e23718";
 
-        // Hide message after 3 seconds
+        // Hide message after 3.5 seconds
         setTimeout(() => {
           failedMessage.style.display = "none";
-        }, 3000);
+          // Reset the form
+          document.getElementById("footer-form").reset();
+        }, 3500);
       } else {
         // Show success message
         successMessage.style.display = "block";
         successMessage.style.backgroundColor = "#087933";
 
-        // Hide success message after 3 seconds
+        // Hide success message after 3.5 seconds
         setTimeout(() => {
           successMessage.style.display = "none";
-        }, 3000);
+          // Reset the form
+          document.getElementById("footer-form").reset();
+        }, 3500);
 
-        // Reset the form
-        document.getElementById("footer-form").reset();
       }
     });
 });
