@@ -129,6 +129,13 @@ body {
   background-color: #087933;
   color: #fff;
 }
+.navbar .side-nav a:focus{
+
+}
+.navbar .side-nav a.active{
+  background-color: #087933;
+  color: #fff;
+}
 
 /*-----------------------------------COMMON BANNER SECTION-------------------------------------*/
 /*banner*/
@@ -1155,13 +1162,22 @@ footer .map-location .map-direction iframe {
     text-decoration: none;
     color: #010101;
     font-weight: 600;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
     font-size: 0.8rem;
   }
 
   .navbar .side-nav a:hover {
     color: #777;
     background-color: transparent;
+    border-color: #777;
+  }
+  .navbar .side-nav a.active{
+    background-color: transparent;
+    color: #010101;
+    border-bottom: 2px solid #010101;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .navbar .ham-menu {
