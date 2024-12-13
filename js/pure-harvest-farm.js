@@ -1,22 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
-  //NAV BAR
+  /*----------------------------NAV BAR----------------------------*/
   const hamMenu = document.querySelector(".ham-menu");
   const sideNav = document.querySelector(".side-nav");
 
-  const menuItems = document.querySelectorAll(".navbar .side-nav a");
+  // create overlay element 
+  // to dim rest of the page when side-nav is active
+  const overlay = document.createElement('div');
+  overlay.className = 'overlay';
+  document.body.appendChild(overlay);
 
-  // current page id
-  const pageId = document.body.id;
+  const menuItems = document.querySelectorAll(".navbar .side-nav a");
 
   //get current page by removing '/' infront of pathname
   const currentPage = window.location.pathname.split("/").pop();
   // console.log(currentPage);
 
-  // toggle ham-menu
+  // add,remove active class of ham-menu, side-nav and overlay
   hamMenu.addEventListener("click", () => {
-    hamMenu.classList.toggle("active");
-    sideNav.classList.toggle("active");
+    const isActive = sideNav.classList.contains("active");
+    
+    if(isActive){
+      hamMenu.classList.remove("active");
+      sideNav.classList.remove("active");
+      overlay.classList.remove("active");
+    }else{
+      hamMenu.classList.add("active");
+      sideNav.classList.add("active");
+      overlay.classList.add("active");
+    }
   });
+
+  // close side-nav when clicked on overlay
+  overlay.addEventListener("click", ()=>{
+    hamMenu.classList.remove("active");
+    sideNav.classList.remove("active");
+    overlay.classList.remove("active");
+  })
 
   //add,remove active class to selected nav link
   menuItems.forEach((menu) => {
@@ -26,7 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // HOME PAGE
+  // current page id
+  const pageId = document.body.id;
+
+ /*----------------------------HOME PAGE----------------------------*/
   if (pageId === "home-page") {
     //full-view imgs-videos options when clicked
     const imageContent = document.querySelectorAll(".image-group");
@@ -83,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // CONTACT PAGE
+  /*----------------------------CONTACT PAGE----------------------------*/
   if (pageId === "contact-page") {
     //validate form display error/success message
     document
@@ -148,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  // PRODUCT PAGE
+  /*----------------------------PRODUCT PAGE----------------------------*/
   if (pageId === "product-page") {
     // add, remove active class
     const productCards = document.querySelectorAll(".product-details");
@@ -184,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  //FOOTER SECTION
+  /*----------------------------FOOTER SECTION----------------------------*/
   // validate subscribe to newsletter form
   document
     .getElementById("subscribe-button")
