@@ -23,7 +23,7 @@ body {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.1);
-  background-image: linear-gradient(to right, #f0f0f0 0%, #fff 100%);
+  background-image: linear-gradient(to right, #fff 20%, #f0f0f0 80%);
 }
 
 .navbar .logo {
@@ -60,7 +60,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.3s ease;
-  z-index: 9;
+  /*above overlay and content*/
+  z-index: 1001;
 }
 
 .navbar .ham-bar:nth-child(1) {
@@ -88,6 +89,23 @@ body {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+/*overlay styling*/
+/*hide at first*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); 
+  /*above other content*/
+  z-index: 999; 
+  display: none;
+}
+.overlay.active {
+  display: block;
+}
+
 /*side-nav links items*/
 .navbar .side-nav {
   position: fixed;
@@ -97,8 +115,9 @@ body {
   height: 100vh;
   font-size: 1rem;
   padding: 20px;
-  z-index: 9;
-  box-shadow: -2px 0 15px rgba(0, 0, 0, 0.3);
+  /*above the overlay*/
+  z-index: 1000;
+  /* box-shadow: -2px 0 15px rgba(0, 0, 0, 0.3); */
 }
 
 .navbar .side-nav.active {
@@ -950,7 +969,6 @@ body {
 footer {
   background-color: #ede9de;
   color: #63371e;
-  /* Dark text for readability */
   padding: 20px;
   text-align: center;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2), 0 -2px 5px rgba(0, 0, 0, 0.15);
