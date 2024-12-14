@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     productCards.forEach((card) => {
-      const svgCloseButton = card.querySelector(".svg-closebtn");
+      const closeButton = card.querySelector(".close-btn");
 
       card.addEventListener("click", (e) => {
         // Prevent click from propagating
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.classList.add("active");
       });
 
-      svgCloseButton.addEventListener("click", (e) => {
+      closeButton.addEventListener("click", (e) => {
         e.stopPropagation();
         // remove outline
         card.blur();
