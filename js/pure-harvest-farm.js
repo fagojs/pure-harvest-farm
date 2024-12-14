@@ -206,6 +206,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /*----------------------------PRODUCT PAGE----------------------------*/
+  if(pageId === "privacy-page"){
+    const infoButtons = document.querySelectorAll('.privacy-container button');
+
+    infoButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const content = this.nextElementSibling;
+
+            // toggle the active of the button
+            this.classList.toggle('active');
+
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    });
+  }
+
   /*----------------------------FOOTER SECTION----------------------------*/
   // validate subscribe to newsletter form
   document
