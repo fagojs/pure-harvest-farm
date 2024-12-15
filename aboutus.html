@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT US</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css">
     <link
-      href="https://fonts.googleapis.com/css?family=Josefin Sans"
       rel="stylesheet"
-    />
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Josefin+Sans"
+    >
   </head>
   <body id="aboutus-page">
     <header>
@@ -19,21 +20,21 @@
               src="./assets/images/logo.png"
               alt="Pure Harvest Farm Logo"
               loading="lazy"
-            />
+            >
           </a>
         </div>
         <div class="side-nav">
           <ul class="menu-items">
-            <li id="menu-item">
+            <li>
               <a href="aboutus.html">ABOUT US</a>
             </li>
-            <li id="menu-item">
+            <li>
               <a href="product.html">PRODUCTS</a>
             </li>
-            <li id="menu-item">
+            <li>
               <a href="contact.html">CONTACT</a>
             </li>
-            <li id="menu-item">
+            <li>
               <a href="sustainability.html">SUSTAINABILITY</a>
             </li>
           </ul>
@@ -48,7 +49,7 @@
     <main>
       <section class="banner" id="about-banner" aria-labelledby="about-heading">
         <div class="inner-banner" id="about-innerbanner">
-          <h2>ABOUT THE BUSINESS</h2>
+          <h2 id="about-heading">ABOUT THE BUSINESS</h2>
           <p>
             At Pure Harvest Farm, we take pride in cultivating fresh, organic
             produce using sustainable, eco-friendly practices that work in
@@ -60,8 +61,8 @@
       </section>
       <section class="whoweare" aria-labelledby="whoweare-title">
         <div class="whoweare-container">
-          <section class="whoweare-description">
-            <h3 class="title">Who We Are?</h3>
+          <div class="whoweare-description">
+            <h3 id="whoweare-title" class="title">Who We Are?</h3>
             <p class="description">
               At Pure Harvest Farm, we nurture a diverse variety of organic,
               farm-fresh produce grown with sustainable methods that honour the
@@ -69,15 +70,15 @@
               enriched fields to your home, we ensure every harvest offers the
               highest standards of quality and environmental care.
             </p>
-          </section>
-          <section class="whoweare-image">
+          </div>
+          <div class="whoweare-image">
             <img
               class="image-group"
               src="./assets/images/whoweare.jpg"
               alt="Farmer plouging field with tractor"
               loading="lazy"
-            />
-          </section>
+            >
+          </div>
         </div>
       </section>
       <section class="aboutvideo-section" aria-labelledby="video-title">
@@ -87,20 +88,16 @@
             Discover how Pure Harvest Farm focuses sustainable practices to grow
             organic produce that cares for both your health and the planet.
           </p>
-          <video
-            class="video-content"
-            controls
-            preload="metadata"
-          >
-            <source src="./assets/videos/aboutus_video.mp4" type="video/mp4" />
+          <video class="video-content" controls preload="metadata">
+            <source src="./assets/videos/aboutus_video.mp4" type="video/mp4" >
             Your browser does not support the video tag.
           </video>
         </div>
       </section>
       <section class="whatwedo" aria-labelledby="whatwedo-title">
         <div class="whatwedo-container">
-          <section class="whatwedo-description">
-            <h3 class="title">What We Do?</h3>
+          <div class="whatwedo-description">
+            <h3 id="whatwedo-title" class="title">What We Do?</h3>
             <p class="description">
               At Pure Harvest Farm, we are a passionate team of farmers,
               innovators, and admiral of the land, united by a mission to grow
@@ -108,34 +105,29 @@
               Grounded in integrity and a deep respect for nature, we strive to
               nourish both our community and the planet with every harvest.
             </p>
-          </section>
-          <section class="whatwedo-image">
+          </div>
+          <div class="whatwedo-image">
             <img
               class="image-group"
               src="./assets/images/whatwedo.jpg"
               alt="Person showing carrot, just taken out from soil"
               loading="lazy"
-            />
-          </section>
+            >
+          </div>
         </div>
       </section>
-      <section class="aboutus-fullview">
+      <div class="aboutus-fullview">
         <!-- Structure for Full View -->
         <div id="fullview" class="fullview">
           <span class="closeview">&times;</span>
           <div class="fullview-content">
-            <img
-              id="fullimage"
-              src=""
-              alt="Full view of the selected image"
-              download
-            />
+            <img id="fullimage" src="#" alt="Full view of the selected image">
             <a id="downloadlink" href="#" download class="download-btn"
               >Download</a
             >
           </div>
         </div>
-      </section>
+      </div>
     </main>
     <footer>
       <div class="footer-container">
@@ -143,9 +135,9 @@
           <div class="openinghours">
             <h2>Opening Hours</h2>
             <div class="hours">
-              <p id="time">Mon - Fri: 8am - 8pm</p>
-              <p id="time">​Saturday: 9am - 7pm</p>
-              <p id="time">​Sunday: 9am - 8pm</p>
+              <p>Mon - Fri: 8am - 8pm</p>
+              <p>​Saturday: 9am - 7pm</p>
+              <p>​Sunday: 9am - 8pm</p>
             </div>
           </div>
           <div class="subscribe-newsletter">
@@ -158,14 +150,14 @@
                 name="subscribe-email"
                 placeholder="Enter Your Email"
                 required
-              />
+              >
               <span>
                 <input
                   type="checkbox"
                   id="subscribe-checkbox"
                   name="subscribe-checkbox"
                   required
-                />
+                >
                 Yes, subscribe me to newsletter.
               </span>
               <button type="button" id="subscribe-button">Subscribe</button>
@@ -177,7 +169,8 @@
             </form>
           </div>
         </section>
-        <section class="map-location">
+        <section class="map-location" aria-labelledby="address-title">
+          <h3 id="address-title">Address</h3>
           <div class="map-direction">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.242926602464!2d151.0370432764584!3d-33.624942706471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b0d5ec93933e9c9%3A0x2c92ba5ef40e340f!2s97%20Arcadia%20Rd%2C%20Arcadia%20NSW%202159!5e0!3m2!1sen!2sau!4v1733584496076!5m2!1sen!2sau"
@@ -187,11 +180,12 @@
             ></iframe>
           </div>
           <div class="location-address">
-            <p class="address">97 Arcadia Rd<br />Arcadia NSW 2159</p>
+            <p class="address">97 Arcadia Rd<br>Arcadia NSW 2159</p>
           </div>
         </section>
       </div>
-      <section class="privacy-policy">
+      <section class="privacy-policy" aria-labelledby="privacy-title">
+        <h3 id="privacy-title">Privacy Policy</h3>
         <p id="privacy-policy">
           &#xA9;
           <script>
@@ -201,6 +195,6 @@
         </p>
       </section>
     </footer>
-    <script type="text/javascript" src="./js/pure-harvest-farm.js"></script>
+    <script src="./js/pure-harvest-farm.js"></script>
   </body>
 </html>
