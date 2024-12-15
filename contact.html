@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACT</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css">
     <link
-      href="https://fonts.googleapis.com/css?family=Josefin Sans"
       rel="stylesheet"
-    />
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Josefin+Sans"
+    >
   </head>
   <body id="contact-page">
     <header>
@@ -19,21 +20,21 @@
               src="./assets/images/logo.png"
               alt="Pure Harvest Farm Logo"
               loading="lazy"
-            />
+            >
           </a>
         </div>
         <div class="side-nav">
           <ul class="menu-items">
-            <li id="menu-item">
+            <li>
               <a href="aboutus.html">ABOUT US</a>
             </li>
-            <li id="menu-item">
+            <li>
               <a href="product.html">PRODUCTS</a>
             </li>
-            <li id="menu-item">
+            <li>
               <a href="contact.html">CONTACT</a>
             </li>
-            <li id="menu-item">
+            <li>
               <a href="sustainability.html">SUSTAINABILITY</a>
             </li>
           </ul>
@@ -47,7 +48,8 @@
     </header>
     <main>
       <div class="contact-container">
-        <section class="form-section">
+        <section class="form-section" aria-labelledby="contact-title">
+          <h2 id="contact-title">Enter Your Details</h2>
           <form class="contact-form" id="contact-form">
             <div class="form-part">
               <input
@@ -56,14 +58,14 @@
                 id="firstname"
                 placeholder="First Name"
                 required
-              />
+              >
               <input
                 type="text"
                 name="lastname"
                 id="lastname"
                 placeholder="Last Name"
                 required
-              />
+              >
             </div>
             <!-- error-container -->
             <p class="error" id="firstname-error" aria-live="polite"></p>
@@ -75,14 +77,14 @@
                 id="email"
                 placeholder="Email"
                 required
-              />
+              >
               <input
                 type="tel"
                 name="contactnumber"
                 id="contactnumber"
                 placeholder="Contact Number"
                 required
-              />
+              >
             </div>
             <!-- error-container -->
             <p class="error" id="email-error" aria-live="polite"></p>
@@ -94,7 +96,7 @@
                 id="messagesubject"
                 placeholder="Message Subject"
                 required
-              />
+              >
             </div>
             <!-- error-container -->
             <p class="error" id="messagesubject-error" aria-live="polite"></p>
@@ -117,7 +119,8 @@
             </p>
           </form>
         </section>
-        <section class="info-social">
+        <section class="info-social" aria-labelledby="infosocial-title">
+          <h2 id="infosocial-title">More Info</h2>
           <div class="info-social-container">
             <section class="description">
               <h3>We are here to help!</h3>
@@ -137,28 +140,28 @@
                     src="./assets/svg/facebook_svg.svg"
                     alt="Connect with us on Facebook"
                     loading="lazy"
-                  />
+                  >
                 </a>
                 <a href="http://www.instagram.com" target="_blank">
                   <img
                     src="./assets/svg/insta_svg.svg"
                     alt="Connect with us on Instagram"
                     loading="lazy"
-                  />
+                  >
                 </a>
                 <a href="http://www.x.com" target="_blank">
                   <img
                     src="./assets/svg/x_svg.svg"
                     alt="Connect with us on X"
                     loading="lazy"
-                  />
+                  >
                 </a>
                 <a href="http://www.youtube.com" target="_blank">
                   <img
                     src="./assets/svg/youtube_svg.svg"
                     alt="Connect with us on Youtube"
                     loading="lazy"
-                  />
+                  >
                 </a>
               </div>
             </section>
@@ -172,9 +175,9 @@
           <div class="openinghours">
             <h2>Opening Hours</h2>
             <div class="hours">
-              <p id="time">Mon - Fri: 8am - 8pm</p>
-              <p id="time">​Saturday: 9am - 7pm</p>
-              <p id="time">​Sunday: 9am - 8pm</p>
+              <p>Mon - Fri: 8am - 8pm</p>
+              <p>​Saturday: 9am - 7pm</p>
+              <p>​Sunday: 9am - 8pm</p>
             </div>
           </div>
           <div class="subscribe-newsletter">
@@ -187,14 +190,14 @@
                 name="subscribe-email"
                 placeholder="Enter Your Email"
                 required
-              />
+              >
               <span>
                 <input
                   type="checkbox"
                   id="subscribe-checkbox"
                   name="subscribe-checkbox"
                   required
-                />
+                >
                 Yes, subscribe me to newsletter.
               </span>
               <button type="button" id="subscribe-button">Subscribe</button>
@@ -206,7 +209,8 @@
             </form>
           </div>
         </section>
-        <section class="map-location">
+        <section class="map-location" aria-labelledby="address-title">
+          <h3 id="address-title">Address</h3>
           <div class="map-direction">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.242926602464!2d151.0370432764584!3d-33.624942706471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b0d5ec93933e9c9%3A0x2c92ba5ef40e340f!2s97%20Arcadia%20Rd%2C%20Arcadia%20NSW%202159!5e0!3m2!1sen!2sau!4v1733584496076!5m2!1sen!2sau"
@@ -216,11 +220,12 @@
             ></iframe>
           </div>
           <div class="location-address">
-            <p class="address">97 Arcadia Rd<br />Arcadia NSW 2159</p>
+            <p class="address">97 Arcadia Rd<br>Arcadia NSW 2159</p>
           </div>
         </section>
       </div>
-      <section class="privacy-policy">
+      <section class="privacy-policy" aria-labelledby="privacy-title">
+        <h3 id="privacy-title">Privacy Policy</h3>
         <p id="privacy-policy">
           &#xA9;
           <script>
@@ -230,6 +235,6 @@
         </p>
       </section>
     </footer>
-    <script type="text/javascript" src="./js/pure-harvest-farm.js"></script>
+    <script src="./js/pure-harvest-farm.js"></script>
   </body>
 </html>
