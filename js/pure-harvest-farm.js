@@ -247,8 +247,47 @@ document.addEventListener("DOMContentLoaded", () => {
       removeActiveClassFromAll();
     });
   }
+  /*----------------------------SUSTAINABILITY PAGE----------------------------*/
+  if (pageId === "sustain-page") {
+    const imageContent = document.querySelectorAll(".image-group");
 
-  /*----------------------------PRODUCT PAGE----------------------------*/
+    imageContent.forEach((img) => {
+      img.addEventListener("click", (event) => {
+        const mediaSrc = event.target.getAttribute("src");
+        openView(mediaSrc, "image");
+      });
+    });
+    document.querySelector(".closeview").addEventListener("click", () => {
+      closeView();
+    });
+    function openView(mediaSrc, type) {
+      // extract elements
+      const fullView = document.getElementById("fullview");
+      const fullImage = document.getElementById("fullimage");
+      const downloadLink = document.getElementById("downloadlink");
+
+      if (type === "image") {
+        fullImage.src = mediaSrc;
+        fullImage.style.display = "block";
+        // Set download link for image
+        downloadLink.href = mediaSrc;
+        downloadLink.style.display = "inline-block";
+      }
+
+      fullView.style.display = "block";
+    }
+
+    //method to close the open media view
+    function closeView() {
+      const fullView = document.getElementById("fullview");
+      fullView.style.display = "none";
+
+      // Clear media sources
+      document.getElementById("fullimage").src = "";
+    }
+  }
+
+  /*----------------------------PRIVACY PAGE----------------------------*/
   if (pageId === "privacy-page") {
     const infoButtons = document.querySelectorAll(".privacy-container button");
 
