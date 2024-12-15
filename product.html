@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUR PRODUCTS</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css">
     <link
-      href="https://fonts.googleapis.com/css?family=Josefin Sans"
       rel="stylesheet"
-    />
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Josefin+Sans"
+    >
   </head>
   <body id="product-page">
     <header>
@@ -19,21 +20,21 @@
               src="./assets/images/logo.png"
               alt="Pure Harvest Farm Logo"
               loading="lazy"
-            />
+            >
           </a>
         </div>
         <div class="side-nav">
           <ul class="menu-items">
-            <li id="menu-item">
+            <li>
               <a href="aboutus.html">ABOUT US</a>
             </li>
-            <li id="menu-item">
+            <li>
               <a href="product.html">PRODUCTS</a>
             </li>
-            <li id="menu-item">
+            <li>
               <a href="contact.html">CONTACT</a>
             </li>
-            <li id="menu-item">
+            <li>
               <a href="sustainability.html">SUSTAINABILITY</a>
             </li>
           </ul>
@@ -51,9 +52,10 @@
         id="product-banner"
         aria-labelledby="product-banner-title"
       >
+      <h2 id="product-banner-title">Product Banner</h2>
         <div class="inner-banner" id="product-innerbanner">
           <section class="description">
-            <h2>Check Our Products</h2>
+            <h3>Check Our Products</h3>
             <p>
               Explore the finest selection of organic, farm-fresh produce,
               lovingly grown with eco-friendly practices at Pure Harvest Farm.
@@ -61,14 +63,15 @@
               today!
             </p>
           </section>
-          <section class="features">
+          <section class="features" aria-labelledby="product-banner-title">
+            <h3>Features</h3>
             <div class="product-feature">
               <figure>
                 <img
                   src="./assets/svg/vibrant_fruit.svg"
                   alt="Red apple icon"
                   loading="lazy"
-                />
+                >
               </figure>
               <span class="feature-info">Vibrant Fruits</span>
             </div>
@@ -78,7 +81,7 @@
                   src="./assets/svg/bright_vegetables.svg"
                   alt="Yellow carrot icon"
                   loading="lazy"
-                />
+                >
               </figure>
               <span class="feature-info">Bright Vegetables</span>
             </div>
@@ -88,7 +91,7 @@
                   src="./assets/svg/healthy_produce.svg"
                   alt="Security icon with '+' sign"
                   loading="lazy"
-                />
+                >
               </figure>
               <span class="feature-info">Healthy Produce</span>
             </div>
@@ -98,18 +101,18 @@
       <section class="product-section">
         <ul class="product-list">
           <li class="product-details" tabindex="0">
-            <section class="product-intro">
+            <div class="product-intro">
               <img
                 src="./assets/images/product_tomatoe.jpg"
                 alt="Fresh Tomatoes With Branch"
                 loading="lazy"
-              />
+              >
               <div class="intro-details">
                 <h3>Tomatoe</h3>
                 <p>Juicy | Ripe | Flavorous</p>
               </div>
-            </section>
-            <section class="product-info">
+            </div>
+            <div class="product-info">
               <button type="button" class="close-btn">
                 close
               </button>
@@ -122,50 +125,50 @@
                     more.
                   </p>
                 </section>
-                <section class="info-contact">
+                <div class="info-contact">
                   <p>Like What You See?</p>
-                  <a href="contact.html">
-                    <button type="button" class="contact-btn">
+                  <a href="contact.html" class="contact-btn">
+                    <span>
                       Contact Us
-                    </button>
+                    </span>
                   </a>
-                </section>
+                </div>
               </div>
-            </section>
+            </div>
           </li>
           <li class="product-details" tabindex="0">
-            <section class="product-intro">
+            <div class="product-intro">
               <img
                 src="./assets/images/product_apple.jpg"
                 alt="Fresh Red Apples"
-              />
+              >
               <div class="intro-details">
                 <h3>Apple</h3>
                 <p>Crisp | Sweet | Delicious</p>
               </div>
-            </section>
-            <section class="product-info">
+            </div>
+            <div class="product-info">
               <button type="button" class="close-btn">
                 close
               </button>
               <div class="additional-info">
-                <section class="info-introduction">
+                <div class="info-introduction">
                   <h3>APPLE</h3>
                   <p>
                     Crunchy, naturally sweet, and packed with organic goodness—a
                     wholesome snack perfect for any time of the day.
                   </p>
-                </section>
-                <section class="info-contact">
+                </div>
+                <div class="info-contact">
                   <p>Like What You See?</p>
-                  <a href="contact.html">
-                    <button type="button" class="contact-btn">
+                  <a href="contact.html" class="contact-btn">
+                    <span>
                       Contact Us
-                    </button>
+                    </span>
                   </a>
-                </section>
+                </div>
               </div>
-            </section>
+            </div>
           </li>
           <li class="product-details" tabindex="0">
             <section class="product-intro">
@@ -173,69 +176,69 @@
                 src="./assets/images/product_avo.jpg"
                 alt="Sliced Avocadoes"
                 loading="lazy"
-              />
+              >
               <div class="intro-details">
                 <h3>Avocado</h3>
                 <p>Creamy | Rich | Perfect</p>
               </div>
             </section>
-            <section class="product-info">
+            <div class="product-info">
               <button type="button" class="close-btn">
                 close
               </button>
               <div class="additional-info">
-                <section class="info-introduction">
+                <div class="info-introduction">
                   <h3>AVOCADO</h3>
                   <p>
                     Smooth, creamy, and full of natural richness—ideal for
                     organic guacamole, fresh salads, or a wholesome spread.
                   </p>
-                </section>
-                <section class="info-contact">
+                </div>
+                <div class="info-contact">
                   <p>Like What You See?</p>
-                  <a href="contact.html">
-                    <button type="button" class="contact-btn">
+                  <a href="contact.html" class="contact-btn">
+                    <span>
                       Contact Us
-                    </button>
+                    </span>
                   </a>
-                </section>
+                </div>
               </div>
-            </section>
+            </div>
           </li>
           <li class="product-details" tabindex="0">
-            <section class="product-intro">
+            <div class="product-intro">
               <img
                 src="./assets/images/product_orange.jpg"
                 alt="Oranges hanging on the tree"
                 loading="lazy"
-              />
+              >
               <div class="intro-details">
                 <h3>Orange</h3>
                 <p>Refreshing | Tangy | Healthy</p>
               </div>
-            </section>
-            <section class="product-info">
+            </div>
+            <div class="product-info">
               <button type="button" class="close-btn">
                 close
               </button>
               <div class="additional-info">
-                <section class="info-introduction">
+                <div class="info-introduction">
                   <h3>ORANGE</h3>
                   <p>
                     Bright, tangy, and naturally packed with vitamin C—a savoury
                     organic treat straight from our farm.
                   </p>
-                </section>
-                <section class="info-contact">
+                </div>
+                <div class="info-contact">
                   <p>Like What You See?</p>
-                  <a href="contact.html">
-                    <button type="button" class="contact-btn">
+                  <a href="contact.html" class="contact-btn">
+                    <span>
                       Contact Us
-                    </button>
+                    </span>
                   </a>
-                </section>
+                </div>
               </div>
-            </section>
+            </div>
           </li>
           <li class="product-details" tabindex="0">
             <div class="product-intro">
@@ -243,7 +246,7 @@
                 src="./assets/images/product_potato.jpg"
                 alt="Potatoes on the floor"
                 loading="lazy"
-              />
+              >
               <div class="intro-details">
                 <h3>Potato</h3>
                 <p>Versatile | Flavourous | Hearty</p>
@@ -254,21 +257,21 @@
                 close
               </button>
               <div class="additional-info">
-                <section class="info-introduction">
+                <div class="info-introduction">
                   <h3>POTATO</h3>
                   <p>
                     Wholesome, hearty, and organically grown—a farm-fresh
                     important for endless culinary possibilities.
                   </p>
-                </section>
-                <section class="info-contact">
+                </div>
+                <div class="info-contact">
                   <p>Like What You See?</p>
-                  <a href="contact.html">
-                    <button type="button" class="contact-btn">
+                  <a href="contact.html" class="contact-btn">
+                    <span>
                       Contact Us
-                    </button>
+                    </span>
                   </a>
-                </section>
+                </div>
               </div>
             </div>
           </li>
@@ -278,7 +281,7 @@
                 src="./assets/images/product_banana.jpg"
                 alt="Bunch of bananas"
                 loading="lazy"
-              />
+              >
               <div class="intro-details">
                 <h3>Banana</h3>
                 <p>Sweet | Nutritious | Energy-Booster</p>
@@ -289,21 +292,21 @@
                 close
               </button>
               <div class="additional-info">
-                <section class="info-introduction">
+                <div class="info-introduction">
                   <h3>BANANA</h3>
                   <p>
                     Naturally sweet and bursting with nutrients, every bite
                     delivers an organic boost of energy straight from the farm.
                   </p>
-                </section>
-                <section class="info-contact">
+                </div>
+                <div class="info-contact">
                   <p>Like What You See?</p>
-                  <a href="contact.html">
-                    <button type="button" class="contact-btn">
+                  <a href="contact.html" class="contact-btn">
+                    <span>
                       Contact Us
-                    </button>
+                    </span>
                   </a>
-                </section>
+                </div>
               </div>
             </div>
           </li>
@@ -316,9 +319,9 @@
           <div class="openinghours">
             <h2>Opening Hours</h2>
             <div class="hours">
-              <p id="time">Mon - Fri: 8am - 8pm</p>
-              <p id="time">​Saturday: 9am - 7pm</p>
-              <p id="time">​Sunday: 9am - 8pm</p>
+              <p>Mon - Fri: 8am - 8pm</p>
+              <p>​Saturday: 9am - 7pm</p>
+              <p>​Sunday: 9am - 8pm</p>
             </div>
           </div>
           <div class="subscribe-newsletter">
@@ -331,14 +334,14 @@
                 name="subscribe-email"
                 placeholder="Enter Your Email"
                 required
-              />
+              >
               <span>
                 <input
                   type="checkbox"
                   id="subscribe-checkbox"
                   name="subscribe-checkbox"
                   required
-                />
+                >
                 Yes, subscribe me to newsletter.
               </span>
               <button type="button" id="subscribe-button">Subscribe</button>
@@ -350,7 +353,8 @@
             </form>
           </div>
         </section>
-        <section class="map-location">
+        <section class="map-location" aria-labelledby="address-title">
+          <h3 id="address-title">Address</h3>
           <div class="map-direction">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.242926602464!2d151.0370432764584!3d-33.624942706471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b0d5ec93933e9c9%3A0x2c92ba5ef40e340f!2s97%20Arcadia%20Rd%2C%20Arcadia%20NSW%202159!5e0!3m2!1sen!2sau!4v1733584496076!5m2!1sen!2sau"
@@ -360,11 +364,12 @@
             ></iframe>
           </div>
           <div class="location-address">
-            <p class="address">97 Arcadia Rd<br />Arcadia NSW 2159</p>
+            <p class="address">97 Arcadia Rd<br>Arcadia NSW 2159</p>
           </div>
         </section>
       </div>
-      <section class="privacy-policy">
+      <section class="privacy-policy" aria-labelledby="privacy-title">
+        <h3 id="privacy-title">Privacy Policy</h3>
         <p id="privacy-policy">
           &#xA9;
           <script>
@@ -374,6 +379,6 @@
         </p>
       </section>
     </footer>
-    <script type="text/javascript" src="./js/pure-harvest-farm.js"></script>
+    <script src="./js/pure-harvest-farm.js"></script>
   </body>
 </html>
