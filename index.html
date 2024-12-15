@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="./css/styles.css">
     <link
-      href="https://fonts.googleapis.com/css?family=Josefin Sans"
       rel="stylesheet"
-    />
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Josefin+Sans"
+    >
   </head>
   <body id="home-page">
     <header>
@@ -19,21 +20,21 @@
               src="./assets/images/logo.png"
               alt="Pure Harvest Farm Logo"
               loading="lazy"
-            />
+            >
           </a>
         </div>
         <div class="side-nav">
           <ul class="menu-items">
-            <li id="menu-item">
+            <li>
               <a href="aboutus.html">ABOUT US</a>
             </li>
-            <li id="menu-item">
+            <li>
               <a href="product.html">PRODUCTS</a>
             </li>
-            <li id="menu-item">
+            <li>
               <a href="contact.html">CONTACT</a>
             </li>
-            <li id="menu-item">
+            <li>
               <a href="sustainability.html">SUSTAINABILITY</a>
             </li>
           </ul>
@@ -46,7 +47,8 @@
       </nav>
     </header>
     <main>
-      <section class="banner" id="home-banner">
+      <section class="banner" id="home-banner" aria-labelledby="banner-title">
+        <h3 id="banner-title">Introduction</h3>
         <div class="inner-banner" id="home-innerbanner">
           <p id="intro">
             At Pure Harvest Farms, we are passionate about growing fresh,
@@ -55,19 +57,20 @@
             harvests! Experience the difference of farm-to-table organic quality
             today!
           </p>
-          <a name="check-products" href="product.html">
-            <button type="button" aria-label="Check our products">
+          <a href="product.html">
+            <span>
               Check Our Products
-            </button>
+            </span>
           </a>
         </div>
       </section>
       <section class="gallery-aroundfarms">
-        <h2>Around The Farm</h2>
+        <h3>Around The Farm</h3>
         <!-- Structure for Normal View -->
         <div class="gallery-container">
-          <section class="top-section">
-            <section class="top-section-first">
+          <section class="top-section" aria-labelledby="topsection-title">
+            <h3 id="topsection-title">Main Part</h3>
+            <div class="top-section-first">
               <div class="video-section">
                 <video
                   class="video-group"
@@ -77,24 +80,22 @@
                   playsinline
                   tabindex="0"
                 >
-                  <!--playsinline for mobile-->>
                   <source
                     src="./assets/videos/farm_video.mp4"
                     type="video/mp4"
-                    loading="lazy"
-                  />
+                  >
                   Your browser does not support the video tag.
                 </video>
               </div>
-            </section>
-            <section class="top-section-aside">
+            </div>
+            <div class="top-section-aside">
               <figure class="image-section" tabindex="0">
                 <img
                   src="./assets/images/farm_1.jpg"
                   alt="Red color house surrounded by trees"
                   class="image-group"
                   loading="lazy"
-                />
+                >
               </figure>
               <figure class="image-section" tabindex="0">
                 <img
@@ -102,18 +103,19 @@
                   alt="Old windmill beside road"
                   class="image-group"
                   loading="lazy"
-                />
+                >
               </figure>
-            </section>
+            </div>
           </section>
-          <section class="bottom-section">
+          <section class="bottom-section" aria-labelledby="bottomsection-title">
+            <h3 id="bottomsection-title">Other Images</h3>
             <figure class="image-section" tabindex="0">
               <img
                 src="./assets/images/farm_3.jpg"
                 alt="around the farm"
                 class="Fruits on the ground fell from trees"
                 loading="lazy"
-              />
+              >
             </figure>
             <figure class="image-section" tabindex="0">
               <img
@@ -121,7 +123,7 @@
                 alt="Banana farm with full of its leaves"
                 class="image-group"
                 loading="lazy"
-              />
+              >
             </figure>
             <figure class="image-section" tabindex="0">
               <img
@@ -129,7 +131,7 @@
                 alt="Woman picking up apple on the basket from the tree"
                 class="image-group"
                 loading="lazy"
-              />
+              >
             </figure>
             <figure class="image-section" tabindex="0">
               <img
@@ -137,7 +139,7 @@
                 alt="Planting vegetables with hands"
                 class="image-group"
                 loading="lazy"
-              />
+              >
             </figure>
           </section>
         </div>
@@ -147,10 +149,9 @@
           <div class="fullview-content">
             <img
               id="fullimage"
-              src=""
+              src="#"
               alt="Full view of the image selected"
-              download
-            />
+            >
             <video id="fullvideo" controls></video>
             <!-- download option -->
             <a id="downloadlink" href="#" download class="download-btn"
@@ -166,9 +167,9 @@
           <div class="openinghours">
             <h2>Opening Hours</h2>
             <div class="hours">
-              <p id="time">Mon - Fri: 8am - 8pm</p>
-              <p id="time">​Saturday: 9am - 7pm</p>
-              <p id="time">​Sunday: 9am - 8pm</p>
+              <p>Mon - Fri: 8am - 8pm</p>
+              <p>​Saturday: 9am - 7pm</p>
+              <p>​Sunday: 9am - 8pm</p>
             </div>
           </div>
           <div class="subscribe-newsletter">
@@ -181,14 +182,14 @@
                 name="subscribe-email"
                 placeholder="Enter Your Email"
                 required
-              />
+              >
               <span>
                 <input
                   type="checkbox"
                   id="subscribe-checkbox"
                   name="subscribe-checkbox"
                   required
-                />
+                >
                 Yes, subscribe me to newsletter.
               </span>
               <button type="button" id="subscribe-button">Subscribe</button>
@@ -200,7 +201,8 @@
             </form>
           </div>
         </section>
-        <section class="map-location">
+        <section class="map-location" aria-labelledby="address-title">
+          <h3 id="address-title">Address</h3>
           <div class="map-direction">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.242926602464!2d151.0370432764584!3d-33.624942706471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b0d5ec93933e9c9%3A0x2c92ba5ef40e340f!2s97%20Arcadia%20Rd%2C%20Arcadia%20NSW%202159!5e0!3m2!1sen!2sau!4v1733584496076!5m2!1sen!2sau"
@@ -210,11 +212,12 @@
             ></iframe>
           </div>
           <div class="location-address">
-            <p class="address">97 Arcadia Rd<br />Arcadia NSW 2159</p>
+            <p class="address">97 Arcadia Rd<br>Arcadia NSW 2159</p>
           </div>
         </section>
       </div>
-      <section class="privacy-policy">
+      <section class="privacy-policy" aria-labelledby="privacy-title">
+        <h3 id="privacy-title">Privacy Policy</h3>
         <p id="privacy-policy">
           &#xA9;
           <script>
@@ -224,6 +227,6 @@
         </p>
       </section>
     </footer>
-    <script type="text/javascript" src="./js/pure-harvest-farm.js"></script>
+    <script src="./js/pure-harvest-farm.js"></script>
   </body>
 </html>
