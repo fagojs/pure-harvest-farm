@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamMenu = document.querySelector(".ham-menu");
   const sideNav = document.querySelector(".side-nav");
 
-  // create overlay element 
+  // create overlay element
   // to dim rest of the page when side-nav is active
-  const overlay = document.createElement('div');
-  overlay.className = 'overlay';
+  const overlay = document.createElement("div");
+  overlay.className = "overlay";
   document.body.appendChild(overlay);
 
   const menuItems = document.querySelectorAll(".navbar .side-nav a");
@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // add,remove active class of ham-menu, side-nav and overlay
   hamMenu.addEventListener("click", () => {
     const isActive = sideNav.classList.contains("active");
-    
-    if(isActive){
+
+    if (isActive) {
       hamMenu.classList.remove("active");
       sideNav.classList.remove("active");
       overlay.classList.remove("active");
-    }else{
+    } else {
       hamMenu.classList.add("active");
       sideNav.classList.add("active");
       overlay.classList.add("active");
@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // close side-nav when clicked on overlay
-  overlay.addEventListener("click", ()=>{
+  overlay.addEventListener("click", () => {
     hamMenu.classList.remove("active");
     sideNav.classList.remove("active");
     overlay.classList.remove("active");
-  })
+  });
 
   //add,remove active class to selected nav link
   menuItems.forEach((menu) => {
@@ -45,45 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  //method for viewing media when clicked
-  function openView(mediaSrc, type) {
-    // extract elements
-    const fullView = document.getElementById("fullview");
-    const fullImage = document.getElementById("fullimage");
-    const fullVideo = document.getElementById("fullvideo");
-    const downloadLink = document.getElementById("downloadlink");
-
-    if (type === "image") {
-      fullImage.src = mediaSrc;
-      fullImage.style.display = "block";
-      fullVideo.style.display = "none";
-      // Set download link for image
-      downloadLink.href = mediaSrc;
-      downloadLink.style.display = "inline-block";
-    } else if (type === "video") {
-      fullVideo.src = mediaSrc;
-      fullVideo.style.display = "block";
-      fullImage.style.display = "none";
-      // download link available via "controls" attribute for video
-    }
-
-    fullView.style.display = "block";
-  }
-
-  //method to close the open media view
-  function closeView() {
-    const fullView = document.getElementById("fullview");
-    fullView.style.display = "none";
-
-    // Clear media sources
-    document.getElementById("fullimage").src = "";
-    document.getElementById("fullvideo").src = "";
-  }
-
   // current page id
   const pageId = document.body.id;
 
- /*----------------------------HOME PAGE----------------------------*/
+  /*----------------------------HOME PAGE----------------------------*/
   if (pageId === "home-page") {
     //full-view imgs-videos options when clicked
     const imageContent = document.querySelectorAll(".image-group");
@@ -105,6 +70,81 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".closeview").addEventListener("click", () => {
       closeView();
     });
+
+    //method for viewing media when clicked
+    function openView(mediaSrc, type) {
+      // extract elements
+      const fullView = document.getElementById("fullview");
+      const fullImage = document.getElementById("fullimage");
+      const fullVideo = document.getElementById("fullvideo");
+      const downloadLink = document.getElementById("downloadlink");
+
+      if (type === "image") {
+        fullImage.src = mediaSrc;
+        fullImage.style.display = "block";
+        fullVideo.style.display = "none";
+        // Set download link for image
+        downloadLink.href = mediaSrc;
+        downloadLink.style.display = "inline-block";
+      } else if (type === "video") {
+        fullVideo.src = mediaSrc;
+        fullVideo.style.display = "block";
+        fullImage.style.display = "none";
+        // download link available via "controls" attribute for video
+      }
+
+      fullView.style.display = "block";
+    }
+
+    //method to close the open media view
+    function closeView() {
+      const fullView = document.getElementById("fullview");
+      fullView.style.display = "none";
+
+      // Clear media sources
+      document.getElementById("fullimage").src = "";
+      document.getElementById("fullvideo").src = "";
+    }
+  }
+
+  /*----------------------------ABOUT US PAGE----------------------------*/
+  if (pageId === "aboutus-page") {
+    const imageContent = document.querySelectorAll(".image-group");
+
+    imageContent.forEach((img) => {
+      img.addEventListener("click", (event) => {
+        const mediaSrc = event.target.getAttribute("src");
+        openView(mediaSrc, "image");
+      });
+    });
+    document.querySelector(".closeview").addEventListener("click", () => {
+      closeView();
+    });
+    function openView(mediaSrc, type) {
+      // extract elements
+      const fullView = document.getElementById("fullview");
+      const fullImage = document.getElementById("fullimage");
+      const downloadLink = document.getElementById("downloadlink");
+
+      if (type === "image") {
+        fullImage.src = mediaSrc;
+        fullImage.style.display = "block";
+        // Set download link for image
+        downloadLink.href = mediaSrc;
+        downloadLink.style.display = "inline-block";
+      }
+
+      fullView.style.display = "block";
+    }
+
+    //method to close the open media view
+    function closeView() {
+      const fullView = document.getElementById("fullview");
+      fullView.style.display = "none";
+
+      // Clear media sources
+      document.getElementById("fullimage").src = "";
+    }
   }
 
   /*----------------------------CONTACT PAGE----------------------------*/
@@ -209,22 +249,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /*----------------------------PRODUCT PAGE----------------------------*/
-  if(pageId === "privacy-page"){
-    const infoButtons = document.querySelectorAll('.privacy-container button');
+  if (pageId === "privacy-page") {
+    const infoButtons = document.querySelectorAll(".privacy-container button");
 
-    infoButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const content = this.nextElementSibling;
+    infoButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const content = this.nextElementSibling;
 
-            // toggle the active of the button
-            this.classList.toggle('active');
+        // toggle the active of the button
+        this.classList.toggle("active");
 
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-            } else {
-                content.style.display = 'block';
-            }
-        });
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
     });
   }
 
@@ -266,7 +306,6 @@ document.addEventListener("DOMContentLoaded", () => {
           // Reset the form
           document.getElementById("footer-form").reset();
         }, 3500);
-
       }
     });
 });
