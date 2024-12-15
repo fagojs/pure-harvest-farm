@@ -309,7 +309,8 @@ body {
 
 /*Full-view media styling*/
 .gallery-aroundfarms .fullview,
-.aboutus-fullview .fullview {
+.aboutus-fullview .fullview,
+.sustain-fullview .fullview{
   display: none;
   position: fixed;
   z-index: 1000;
@@ -322,7 +323,8 @@ body {
 }
 
 .gallery-aroundfarms .fullview-content,
-.aboutus-fullview .fullview-content {
+.aboutus-fullview .fullview-content,
+.sustain-fullview .fullview-content{
   position: relative;
   margin: auto;
   top: 50%;
@@ -334,13 +336,15 @@ body {
 
 .gallery-aroundfarms .fullview-content img,
 .aboutus-fullview .fullview-content img,
+.sustain-fullview .fullview-content img,
 .gallery-aroundfarms .fullview-content video {
   width: 100%;
   height: 100%;
 }
 
 .gallery-aroundfarms .closeview,
-.aboutus-fullview .closeview {
+.aboutus-fullview .closeview,
+.sustain-fullview .closeview {
   position: absolute;
   top: 15px;
   right: 20px;
@@ -351,13 +355,15 @@ body {
 }
 
 .gallery-aroundfarms .closeview:hover,
-.aboutus-fullview .closeview:hover {
+.aboutus-fullview .closeview:hover,
+.sustain-fullview .closeview:hover {
   color: red;
 }
 
 /*download option style*/
 .gallery-aroundfarms .download-btn,
-.aboutus-fullview .download-btn {
+.aboutus-fullview .download-btn,
+.sustain-fullview .download-btn {
   display: inline-block;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -371,7 +377,8 @@ body {
 }
 
 .gallery-aroundfarms .download-btn:hover,
-.aboutus-fullview .download-btn:hover {
+.aboutus-fullview .download-btn:hover,
+.sustain-fullview .download-btn:hover {
   background-color: #055825;
 }
 
@@ -791,6 +798,7 @@ body {
   box-shadow: 10px 0 15px rgba(0, 0, 0, 0.2);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+  cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 .commitment-container .commitment-image img:hover{
@@ -806,6 +814,7 @@ body {
   box-shadow: -10px 0 15px rgba(0, 0, 0, 0.2);
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+  cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 .practices-container .practices-image img:hover {
