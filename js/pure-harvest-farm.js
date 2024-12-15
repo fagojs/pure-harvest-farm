@@ -45,6 +45,45 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+   //method for viewing media when clicked
+   function openView(mediaSrc, type) {
+    // extract elements
+    const fullView = document.getElementById("fullview");
+    const fullImage = document.getElementById("fullimage");
+    const fullVideo = document.getElementById("fullvideo");
+    const downloadLink = document.getElementById("downloadlink");
+
+    if (type === "image") {
+      fullImage.src = mediaSrc;
+      fullImage.style.display = "block";
+      if(fullVideo){
+        fullVideo.style.display = "none";
+      }
+      // Set download link for image
+      downloadLink.href = mediaSrc;
+      downloadLink.style.display = "inline-block";
+    } else if (type === "video") {
+      fullVideo.src = mediaSrc;
+      fullVideo.style.display = "block";
+      if(fullImage){
+        fullImage.style.display = "none";
+      }
+      // download link available via "controls" attribute for video
+    }
+
+    fullView.style.display = "block";
+  }
+
+  //method to close the open media view
+  function closeView() {
+    const fullView = document.getElementById("fullview");
+    fullView.style.display = "none";
+
+    // Clear media sources
+    document.getElementById("fullimage").src = "";
+    document.getElementById("fullvideo").src = "";
+  }
+
   // current page id
   const pageId = document.body.id;
 
@@ -70,41 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".closeview").addEventListener("click", () => {
       closeView();
     });
-
-    //method for viewing media when clicked
-    function openView(mediaSrc, type) {
-      // extract elements
-      const fullView = document.getElementById("fullview");
-      const fullImage = document.getElementById("fullimage");
-      const fullVideo = document.getElementById("fullvideo");
-      const downloadLink = document.getElementById("downloadlink");
-
-      if (type === "image") {
-        fullImage.src = mediaSrc;
-        fullImage.style.display = "block";
-        fullVideo.style.display = "none";
-        // Set download link for image
-        downloadLink.href = mediaSrc;
-        downloadLink.style.display = "inline-block";
-      } else if (type === "video") {
-        fullVideo.src = mediaSrc;
-        fullVideo.style.display = "block";
-        fullImage.style.display = "none";
-        // download link available via "controls" attribute for video
-      }
-
-      fullView.style.display = "block";
-    }
-
-    //method to close the open media view
-    function closeView() {
-      const fullView = document.getElementById("fullview");
-      fullView.style.display = "none";
-
-      // Clear media sources
-      document.getElementById("fullimage").src = "";
-      document.getElementById("fullvideo").src = "";
-    }
   }
 
   /*----------------------------ABOUT US PAGE----------------------------*/
@@ -120,31 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".closeview").addEventListener("click", () => {
       closeView();
     });
-    function openView(mediaSrc, type) {
-      // extract elements
-      const fullView = document.getElementById("fullview");
-      const fullImage = document.getElementById("fullimage");
-      const downloadLink = document.getElementById("downloadlink");
-
-      if (type === "image") {
-        fullImage.src = mediaSrc;
-        fullImage.style.display = "block";
-        // Set download link for image
-        downloadLink.href = mediaSrc;
-        downloadLink.style.display = "inline-block";
-      }
-
-      fullView.style.display = "block";
-    }
-
-    //method to close the open media view
-    function closeView() {
-      const fullView = document.getElementById("fullview");
-      fullView.style.display = "none";
-
-      // Clear media sources
-      document.getElementById("fullimage").src = "";
-    }
   }
 
   /*----------------------------CONTACT PAGE----------------------------*/
@@ -260,31 +239,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".closeview").addEventListener("click", () => {
       closeView();
     });
-    function openView(mediaSrc, type) {
-      // extract elements
-      const fullView = document.getElementById("fullview");
-      const fullImage = document.getElementById("fullimage");
-      const downloadLink = document.getElementById("downloadlink");
-
-      if (type === "image") {
-        fullImage.src = mediaSrc;
-        fullImage.style.display = "block";
-        // Set download link for image
-        downloadLink.href = mediaSrc;
-        downloadLink.style.display = "inline-block";
-      }
-
-      fullView.style.display = "block";
-    }
-
-    //method to close the open media view
-    function closeView() {
-      const fullView = document.getElementById("fullview");
-      fullView.style.display = "none";
-
-      // Clear media sources
-      document.getElementById("fullimage").src = "";
-    }
   }
 
   /*----------------------------PRIVACY PAGE----------------------------*/
