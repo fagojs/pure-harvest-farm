@@ -308,7 +308,8 @@ body {
 }
 
 /*Full-view media styling*/
-.gallery-aroundfarms .fullview {
+.gallery-aroundfarms .fullview,
+.aboutus-fullview .fullview {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -320,7 +321,8 @@ body {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-.gallery-aroundfarms .fullview-content {
+.gallery-aroundfarms .fullview-content,
+.aboutus-fullview .fullview-content {
   position: relative;
   margin: auto;
   top: 50%;
@@ -331,12 +333,14 @@ body {
 }
 
 .gallery-aroundfarms .fullview-content img,
+.aboutus-fullview .fullview-content img,
 .gallery-aroundfarms .fullview-content video {
   width: 100%;
   height: 100%;
 }
 
-.gallery-aroundfarms .closeview {
+.gallery-aroundfarms .closeview,
+.aboutus-fullview .closeview {
   position: absolute;
   top: 15px;
   right: 20px;
@@ -346,12 +350,14 @@ body {
   cursor: pointer;
 }
 
-.gallery-aroundfarms .closeview:hover {
+.gallery-aroundfarms .closeview:hover,
+.aboutus-fullview .closeview:hover {
   color: red;
 }
 
 /*download option style*/
-.gallery-aroundfarms .download-btn {
+.gallery-aroundfarms .download-btn,
+.aboutus-fullview .download-btn {
   display: inline-block;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -364,7 +370,8 @@ body {
   transition: background-color 0.3s ease-in-out;
 }
 
-.gallery-aroundfarms .download-btn:hover {
+.gallery-aroundfarms .download-btn:hover,
+.aboutus-fullview .download-btn:hover {
   background-color: #055825;
 }
 
@@ -441,6 +448,7 @@ body {
 .whatwedo-container .whatwedo-image img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
