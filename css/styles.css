@@ -3,6 +3,7 @@
   outline: 0.1875rem solid #FFD700;
   border-radius: 0.3125rem;
 }
+
 html,
 body {
   height: 100vh;
@@ -62,6 +63,7 @@ body {
   /*above overlay and content*/
   z-index: 1001;
 }
+
 .navbar .ham-bar:nth-child(1) {
   top: 25%;
 }
@@ -95,11 +97,12 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   /*above other content*/
-  z-index: 999; 
+  z-index: 999;
   display: none;
 }
+
 .overlay.active {
   display: block;
 }
@@ -148,7 +151,8 @@ body {
   background-color: #087933;
   color: #fff;
 }
-.navbar .side-nav a.active{
+
+.navbar .side-nav a.active {
   background-color: #087933;
   color: #fff;
 }
@@ -162,6 +166,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.banner h3 {
+  display: none;
 }
 
 .inner-banner {
@@ -201,10 +209,9 @@ body {
   color: #fff;
   font-size: 1.125rem;
   line-height: 1.2;
-  margin-bottom: 1.25rem;
 }
 
-#home-banner button {
+#home-banner a {
   padding: 1.25rem;
   background-color: #fff;
   color: #087933;
@@ -215,9 +222,10 @@ body {
   border-radius: 0.3125rem;
   cursor: pointer;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  text-decoration: none;
 }
 
-#home-banner button:hover {
+#home-banner a:hover {
   background-color: #087933;
   color: #fff;
   transform: scale(1.1);
@@ -229,7 +237,7 @@ body {
   margin: 3.125rem 1.875rem;
 }
 
-.gallery-aroundfarms h2 {
+.gallery-aroundfarms h3 {
   color: #087933;
   font-weight: bold;
   line-height: 1.5;
@@ -251,6 +259,11 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.gallery-aroundfarms .top-section h3,
+.gallery-aroundfarms .bottom-section h3 {
+  display: none;
 }
 
 /*Video section*/
@@ -309,7 +322,7 @@ body {
 /*Full-view media styling*/
 .gallery-aroundfarms .fullview,
 .aboutus-fullview .fullview,
-.sustain-fullview .fullview{
+.sustain-fullview .fullview {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -323,7 +336,7 @@ body {
 
 .gallery-aroundfarms .fullview-content,
 .aboutus-fullview .fullview-content,
-.sustain-fullview .fullview-content{
+.sustain-fullview .fullview-content {
   position: relative;
   margin: auto;
   top: 50%;
@@ -404,7 +417,8 @@ body {
 }
 
 /*Main content*/
-.whoweare, .whatwedo {
+.whoweare,
+.whatwedo {
   margin: 3.125rem;
 }
 
@@ -500,11 +514,12 @@ body {
 #product-banner {
   /* background-image: linear-gradient(-90deg, #ede9de 0%, #b18e5a 100%); */
   background-image: linear-gradient(to right, #a5dd9b 10%, #c5ebaa 90%);
-  padding: 3.125rem 1.25rem;
+  padding: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: auto;
 }
 
 #product-innerbanner {
@@ -515,7 +530,14 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-#product-banner h2 {
+#product-banner h2,
+#product-banner .features h3 {
+  display: none;
+}
+
+#product-banner h3 {
+  display: block;
+  margin-top: 0;
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 0.9375rem;
@@ -651,7 +673,7 @@ body {
   cursor: default;
 }
 
-.product-section .product-info .close-btn{
+.product-section .product-info .close-btn {
   align-self: flex-end;
   padding: 0.3125rem 0.625rem;
   border: none;
@@ -661,9 +683,10 @@ body {
   font-size: 0.875rem;
   cursor: pointer;
   box-shadow: 0.25rem 0 0.625rem rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out, color o.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-.product-section .product-info .close-btn:hover{
+
+.product-section .product-info .close-btn:hover {
   color: #e23718;
   box-shadow: 0.25rem 0 0.9375rem rgba(0, 0, 0, 0.25);
 }
@@ -690,8 +713,13 @@ body {
 }
 
 
-.product-section .product-info .info-introduction,
 .product-section .product-info .info-contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.product-section .product-info .info-introduction {
   text-align: center;
 }
 
@@ -714,9 +742,10 @@ body {
 
 .product-section .contact-btn {
   padding: 0.625rem 0.9375rem;
+  width: fit-content;
+  margin: 0 auto;
   background-color: white;
   color: #087933;
-  padding: 0.625rem 1.25rem;
   border: none;
   border-radius: 0.3125rem;
   font-family: 'Poppins', sans-serif;
@@ -724,6 +753,7 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: transform 0.3s ease-in-out, background-color 0.3s;
+  text-decoration: none;
 }
 
 .product-section .contact-btn:hover {
@@ -740,7 +770,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-#sustain-innerbanner{
+
+#sustain-innerbanner {
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -753,10 +784,18 @@ body {
 }
 
 #sustain-banner h3 {
+  display: block;
   font-size: 1.5rem;
   font-weight: normal;
   margin-top: 0;
   color: #fff;
+}
+
+#commitment-title,
+.commitment-image h3,
+#practices-title,
+.practices-image h3 {
+  display: none;
 }
 
 /*Main content*/
@@ -774,6 +813,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .commitment-container .commitment-description {
   display: flex;
   flex-direction: column;
@@ -781,6 +821,7 @@ body {
   text-align: justify;
   margin-left: 3.125rem;
 }
+
 .practices-container .practices-description {
   display: flex;
   flex-direction: column;
@@ -788,6 +829,7 @@ body {
   text-align: justify;
   margin-right: 3.125rem;
 }
+
 .commitment-container .commitment-description h3,
 .practices-container .practices-description h3 {
   color: #087933;
@@ -796,12 +838,14 @@ body {
   margin-top: 0;
   margin-bottom: 0.625rem;
 }
+
 .commitment-container .commitment-description p {
   margin-top: 0;
   font-size: 1.2rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
 }
+
 .practices-container .practices-description ul {
   margin-top: 0;
   font-size: 1.2rem;
@@ -830,7 +874,8 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
-.commitment-container .commitment-image img:hover{
+
+.commitment-container .commitment-image img:hover {
   border-top-left-radius: 1.875rem;
   border-bottom-left-radius: 1.875rem;
   transform: translateX(1.25rem);
@@ -846,6 +891,7 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
+
 .practices-container .practices-image img:hover {
   border-top-right-radius: 1.875rem;
   border-bottom-right-radius: 1.875rem;
@@ -891,6 +937,10 @@ body {
 /*FORM SECTION*/
 .contact-container {
   margin: 3.125rem 1.875rem;
+}
+
+.contact-container h2 {
+  display: none;
 }
 
 .contact-container .form-section {
@@ -1008,26 +1058,35 @@ body {
 }
 
 /*-----------------------------------PRIVACY PAGE-------------------------------------*/
-.privacy-container{
+.privacy-container {
   margin: 3.125rem;
   display: flex;
   flex-direction: column;
-} 
-.privacy-container p{
+}
+
+.privacy-container p {
   color: #1d355b;
   line-height: 1.5;
 }
-.privacy-container h2{
+
+.privacy-container h2 {
   color: #087933;
   text-transform: uppercase;
 }
-.privacy-container .info-collection{
+
+.privacy-container .info-collection {
   margin: 0.625rem 0;
 }
-.privacy-container{
+
+.privacy-container .info-collection h3 {
+  display: none;
+}
+
+.privacy-container {
   font-size: 1.125rem;
 }
-.privacy-container button{
+
+.privacy-container button {
   background-color: #f0f0f0;
   padding: 0.625rem 0.3125rem;
   color: #333;
@@ -1041,26 +1100,31 @@ body {
   border-radius: 0.3125rem;
   transition: background-color 0.3s ease-in-out;
 }
+
 .privacy-container button.active,
-.privacy-container button:hover{
+.privacy-container button:hover {
   background-color: #ccc;
 }
-.privacy-container .info-content{
+
+.privacy-container .info-content {
   padding: 0.625rem;
   /*hide at first*/
   display: none;
   background-color: #f0f0f0;
   border-left: 0.1875rem solid #087933;
 }
-.privacy-container a{
+
+.privacy-container a {
   color: #087933;
   font-weight: 600;
   text-decoration: none;
 }
-.privacy-container a:hover{
+
+.privacy-container a:hover {
   padding-bottom: 0.125rem;
   border-bottom: 0.125rem solid #087933;
 }
+
 /*-----------------------------------FOOTER SECTION-------------------------------------*/
 /* General Footer Styling */
 footer {
@@ -1127,6 +1191,7 @@ footer .footer-topsection {
   font-size: 1rem;
   margin: 0 auto;
 }
+
 .footer-form input[type="checkbox"] {
   padding: 0.625rem;
   border: 1px solid #ccc;
@@ -1170,6 +1235,7 @@ footer .footer-topsection {
   padding: 0.5rem;
   margin: 0 auto;
 }
+
 /* Map and Address Section */
 footer .map-location .map-direction iframe {
   border: 1px solid #777;
@@ -1184,6 +1250,14 @@ footer .map-location .map-direction iframe {
   line-height: 1.5;
 }
 
+.map-location h3 {
+  color: #1d355b;
+  font-size: 1.125rem;
+  margin-bottom: 0.9375rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 /* Privacy Policy */
 .privacy-policy p {
   font-size: 1rem;
@@ -1194,6 +1268,14 @@ footer .map-location .map-direction iframe {
 .privacy-policy a {
   color: #007bff;
   text-decoration: none;
+}
+
+.privacy-policy h3 {
+  color: #1d355b;
+  font-size: 1.125rem;
+  margin-bottom: 0.9375rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .privacy-policy a:hover {
@@ -1300,7 +1382,8 @@ footer .map-location .map-direction iframe {
     background-color: transparent;
     border-color: #777;
   }
-  .navbar .side-nav a.active{
+
+  .navbar .side-nav a.active {
     background-color: transparent;
     color: #63371e;
     border-bottom: 0.125rem solid #63371e;
@@ -1312,7 +1395,8 @@ footer .map-location .map-direction iframe {
   .navbar .ham-menu {
     display: none;
   }
-  .overlay.active{
+
+  .overlay.active {
     display: none;
   }
 
@@ -1374,20 +1458,24 @@ footer .map-location .map-direction iframe {
   .commitment {
     margin-right: 5rem;
   }
-  .commitment-container .commitment-description{
+
+  .commitment-container .commitment-description {
     margin-left: 5rem;
   }
+
   .practices {
     margin-left: 5rem;
   }
-  .practices-container .practices-description{
+
+  .practices-container .practices-description {
     margin-right: 5rem;
   }
 
-  .supporting-partners .partners-container{
+  .supporting-partners .partners-container {
     width: 60%;
     margin: 0 auto;
   }
+
   /*-----------------------------------FOOTER SECTION-------------------------------------*/
   footer .footer-container {
     gap: 1.25rem;
@@ -1538,10 +1626,11 @@ footer .map-location .map-direction iframe {
   .commitment {
     margin-right: 3.125rem;
   }
-  
+
   .practices {
     margin-left: 3.125rem;
   }
+
   .commitment .commitment-container,
   .practices .practices-container {
     flex-direction: row;
@@ -1551,18 +1640,21 @@ footer .map-location .map-direction iframe {
     width: 50%;
     margin-left: 1.875rem;
   }
+
   .commitment-container .commitment-description p {
     margin-bottom: 0;
   }
 
-  .aboutvideo-section .video-container{
+  .aboutvideo-section .video-container {
     width: 80%;
   }
+
   .practices-container .practices-description {
     width: 50%;
     margin-right: 1.875rem;
   }
-  .practices-container .practices-description ul{
+
+  .practices-container .practices-description ul {
     margin-bottom: 0;
   }
 
@@ -1574,7 +1666,8 @@ footer .map-location .map-direction iframe {
   .commitment-container .commitment-image {
     order: -1;
   }
-  .supporting-partners .partners-container{
+
+  .supporting-partners .partners-container {
     width: 90%;
     margin: 0 auto;
   }
@@ -1622,14 +1715,17 @@ footer .map-location .map-direction iframe {
   .product-section .product-info {
     padding: 0;
   }
+
   .product-section .product-info .close-btn {
     align-self: flex-end;
     margin-right: 0.625rem;
   }
+
   .product-section .product-info .info-introduction p,
-  .product-section .product-info .info-contact p{
+  .product-section .product-info .info-contact p {
     margin-bottom: 0;
   }
+
   /*-----------------------------------CONTACT PAGE-------------------------------------*/
   .contact-container {
     display: flex;
@@ -1686,11 +1782,11 @@ footer .map-location .map-direction iframe {
   }
 
   /*-----------------------------------SUSTAINABILITY PAGE-------------------------------------*/
-  .supporting-partners .partners-container{
+  .supporting-partners .partners-container {
     width: 60%;
   }
 
-  .aboutvideo-section .video-container{
+  .aboutvideo-section .video-container {
     width: 60%;
   }
 
@@ -1727,21 +1823,25 @@ footer .map-location .map-direction iframe {
   .product-section .product-info figure {
     margin-top: 0;
   }
-   /*-----------------------------------SUSTAINABILITY PAGE-------------------------------------*/
-   .commitment {
+
+  /*-----------------------------------SUSTAINABILITY PAGE-------------------------------------*/
+  .commitment {
     margin-right: 6.25rem;
   }
-  .commitment-container .commitment-description{
+
+  .commitment-container .commitment-description {
     margin-left: 3.125rem;
   }
-  
+
   .practices {
     margin-left: 6.25rem;
   }
+
   .practices-container .practices-description {
     margin-right: 3.125rem;
   }
-   .supporting-partners .partners-container{
+
+  .supporting-partners .partners-container {
     width: 50%;
   }
 
